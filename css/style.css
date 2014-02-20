@@ -6,6 +6,15 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	width: 100%;
 }
 
+.fixed {
+	position: fixed;
+	z-index: 999;
+}
+
+.navigation {
+	background-color: #fff;
+}
+
 .col-md-12 {
 	padding: 0;
 }
@@ -14,8 +23,8 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100px;
 }
 
-#nav {
-	background-color: #fff;
+#page {
+	z-index: 10;
 }
 
 #lang {
@@ -25,6 +34,21 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 #sidebar {
 	position: fixed;
 	right: 0;
+	z-index: 10;
+}
+
+#bg_photo {
+	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
+	background-size: cover;*/
+	z-index: 1;
+	position: fixed;
+	margin-top: 100px;
+}
+
+.test {
+	display: block;
+	position: absolute;
+	width: 100%;
 }
 
 .submenu {
@@ -124,6 +148,21 @@ h2.slogan {
 	padding: 0px;
 }
 
+.gras {
+	font-weight: bold;
+}
+
+.deroul {
+	background-color: #ff002a;
+	height: 50px;
+	color: white;
+}
+
+.txt_accueil {
+	background-color: rgba(255,255,255,0.85);
+	height: 300px;
+}
+
 /* ---------------- A EFFACER APRES DEV --------------------
 
 
@@ -147,6 +186,6 @@ h2.slogan {
 	background-color: #9925aa;
 }
 
-#page {
+/*#page {
 	background-color: grey;
-}
+}*/
