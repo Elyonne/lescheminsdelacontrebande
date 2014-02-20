@@ -1,9 +1,13 @@
-html, body, .container, .row.cent, #page, #sidebar {
+html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100%;
 }
 
 .container {
 	width: 100%;
+}
+
+.col-md-12 {
+	padding: 0;
 }
 
 #nav, #logo, #lang, #menu {
@@ -91,6 +95,33 @@ h2.slogan {
 	color: #fff;
 	font-style: italic;
 	font-size: 10px;
+}
+
+/** position absolute pour les deux images (ancré en haut et en bas) dans le meme bloc**/
+
+.images_parc {
+	position: relative;
+	height: 100%;
+}
+
+.parc {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+
+.parc_pub {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+}
+
+
+#sidebar .container-fluid {
+	padding: 0px;
 }
 
 /* ---------------- A EFFACER APRES DEV --------------------
