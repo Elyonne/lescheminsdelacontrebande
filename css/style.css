@@ -4,43 +4,62 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100%;
 }
 
+*{
+	transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+}
+
 .container {
-	width: 100%;
+}
+
+.wrapper{
+	float:left;
+	margin-left:8%;
+	width:92%;
+}
+
+.wrapper.reset{
+	margin:auto;
+	width:100%;
+}
+
+.reset{
+	margin:0;
+	padding:0;
+}
+
+#content{
+}
+
+.left{
+	float:left;
 }
 
 #overlay{
 	background:#000;
 	position:fixed;
 	top:100px;
-	height:100%;
+	height:0%;
 	width:100%;
 	z-index:20;
 	opacity:0;
-	display:none;
-	
-	transition:0.5s;
-	-webkit-transition:0.5s;
-	-moz-transition:0.5s;
-	-moz-transition:0.5s;
-	-mz-transition:0.5s;
-	-o-transition:0.5s;
-	
+	transition: opacity 0.5s ease, height 0	0.5s;
 }
 
 #overlay.visible{
-	display:block;
+	transition: opacity 0.5s ease, height 0;
+	height:100%;
 	opacity:0.8;
-}
-
-.fixed {
-	position: fixed;
 }
 
 .block {
 	display: block;
 }
 
-.gras {
+strong {
 	font-weight: bold;
 }
 
@@ -50,23 +69,36 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 .col-md-12 {
-	padding: 0;
 }
 
-#nav, #logo, #lang, #menu {
+#nav, #logo, #menu {
 	height: 100px;
 	z-index:999;
-	position:relative;
+}
+
+#lang{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	width:6%;
+	position:absolute;
+	height:100%;
 }
 
 #page {
 	z-index: 10;
 }
 
+#logo img{
+	width:100%;
+	max-width:230px;
+}
+
+
 /****************************** MENU ******************************/
 
-.navigation {
-	z-index: 999;
+#menu{
+	background:#fff;
 }
 
 #nav .wrapper{
@@ -76,22 +108,72 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	background-color: #fff;
 }
 
-#lang {
-	padding-top: 65px;
+#nav{
+	width:100%;
+	position:fixed;
+	background-color: #fff;
+	padding-right:25%;
 }
 
 #sidebar {
 	position: fixed;
 	right: 0;
 	z-index: 10;
+	min-width:296px;
+	max-width:300px;
 }
 
+@media screen and (max-width:767px){
+	#bg_photo img{	
+		min-height:100%;
+		width:0;
+	}
+}
+
+@media screen and (max-width:1199px){
+	#sidebar{
+		transform:translateX(296px);
+		-webkit-transform:translateX(296px);
+	}
+	#sidebar.visible{
+		transform:translateX(0);
+		-webkit-transform:translateX(0);
+	}
+	@media screen and (min-width:1200px){
+		body{
+			display:table;
+		}
+		#page,#sidebar{
+			display:table-cell;
+		}
+		#page{
+			width:100%;
+		}
+	}
+
+
+	#nav{
+		padding:0;
+	}
+	#bg_photo{
+		padding:0!important;
+	}
+}
+
+
+
 #bg_photo {
-	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
-	background-size: cover;*/
+	background: url(../img/doubs_combe.jpg) center center no-repeat;
+	background-size: cover;
 	z-index: -1;
 	position: fixed;
-	margin-top: 100px;
+	padding-top: 100px;
+	width:100%;
+}
+
+#bg_photo img{
+	width:100%;
+	display:none;
 }
 
 .test {
@@ -104,7 +186,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	position:relative;
 	z-index:0;
 	background:0;
-	
+
 }
 
 .submenu > div {
@@ -126,6 +208,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 
 .menu > li:last-child {
 	margin-left: auto;
+	margin-right:10px;
 }
 
 .menu > li:last-child a {
@@ -156,7 +239,11 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 .citation {
-	padding-top: 20px;
+	padding: 20px;
+	height:100px;
+	position:relative;
+	z-index:99;
+	background:#FF002A;
 }
 
 .citation .quote {
@@ -190,7 +277,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	width: 100%;
 	overflow: hidden;
 	position: absolute;
-	bottom: 0;
+	bottom: 100px;
 }
 
 #sidebar .container-fluid {
@@ -198,16 +285,14 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 /****************************** FOOTER ******************************/
-
 footer {
-	background-color: #333;
 	height: 120px;
-	position: absolute;
 	bottom: 0;
-}
-
-.foot {
-	height: 120px;
+	z-index:10;
+	background-color: #333;	
+	position:relative;
+	z-index:10;
+	background-color: #333;
 }
 
 .bg_foot {
@@ -220,17 +305,14 @@ ul.menu_footer {
 	font-size: 13px;
 	display: flex;
 	justify-content: space-between;
-}
-
-.bloc_menu_footer {
-	position: absolute;
+	position:relative;
+	margin:auto;
 	top: 58px;
-	left: 108px;
 	width: 600px;
+	list-style: none;
 }
 
 .menu_footer li {
-	list-style: none;
 	font-weight: bold;
 }
 
@@ -243,26 +325,13 @@ ul.menu_footer {
 
 .bloc_partenaires {
 	color: #fff;
-	margin-top: 90px;
-	margin-left: 90px;
+	margin:auto;
+	width:600px;
+	margin-top: 75px;
 	font-size: 12px;
 }
 
 /****************************** ACCUEIL ******************************/
-
-#bg_photo {
-	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
-	background-size: cover;*/
-	z-index: 1;
-	position: fixed;
-	margin-top: 100px;
-}
-
-.photo_fond {
-	display: block;
-	position: absolute;
-	width: 100%;
-}
 
 h2.slogan {
 	color: #797979;
@@ -284,8 +353,9 @@ h2.slogan {
 	height: 300px;
 }
 
-#contenu_accueil {
-	margin-top: 50px;
+#content.accueil {
+	margin-top: 100px;
+	padding-top:50px;
 	margin-bottom: 200px;
 	position:relative;
 	z-index:10;
