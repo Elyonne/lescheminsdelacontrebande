@@ -284,9 +284,7 @@ h2.slogan {
 
 #contenu_accueil {
 	margin-top: 50px;
-<<<<<<< HEAD
 	margin-bottom: 200px;
-=======
 	position:relative;
 	z-index:10;
 }
@@ -304,7 +302,6 @@ h2.slogan {
 .txt_accueil {
 	background-color: rgba(255,255,255,0.85);
 	height: 300px;
->>>>>>> f2f8923409c2223386a1a5d9ae84e89c79367a96
 }
 
 /* ---------------- A EFFACER APRES DEV --------------------
