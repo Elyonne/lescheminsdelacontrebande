@@ -1,3 +1,5 @@
+/* GENERAL */
+
 html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100%;
 }
@@ -8,11 +10,14 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 
 .fixed {
 	position: fixed;
-	z-index: 999;
 }
 
-.navigation {
-	background-color: #fff;
+.block {
+	display: block;
+}
+
+.gras {
+	font-weight: bold;
 }
 
 .col-md-12 {
@@ -27,6 +32,13 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	z-index: 10;
 }
 
+/* MENU */
+
+.navigation {
+	background-color: #fff;
+	z-index: 999;
+}
+
 #lang {
 	padding-top: 65px;
 }
@@ -37,36 +49,9 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	z-index: 10;
 }
 
-#bg_photo {
-	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
-	background-size: cover;*/
-	z-index: 1;
-	position: fixed;
-	margin-top: 100px;
-}
-
-.test {
-	display: block;
-	position: absolute;
-	width: 100%;
-}
-
 .submenu {
 	height: 400px;
 	margin-top: -500px;
-}
-
-.block {
-	display: block;
-}
-
-h2.slogan {
-	color: #797979;
-	font-weight: 300;
-	font-style: italic;
-	font-size: 21px;
-	padding-left: 20px;
-	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
 }
 
 .menu {
@@ -103,6 +88,12 @@ h2.slogan {
 	font-size: 18px;
 	color: #ff002a;
 	font-weight: 600;
+}
+
+/* SIDEBAR */
+
+#sidebar {
+	background-color: #FF002A;
 }
 
 .citation {
@@ -143,13 +134,33 @@ h2.slogan {
 	bottom: 0;
 }
 
-
 #sidebar .container-fluid {
 	padding: 0px;
 }
 
-.gras {
-	font-weight: bold;
+/* ACCUEIL */
+
+#bg_photo {
+	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
+	background-size: cover;*/
+	z-index: 1;
+	position: fixed;
+	margin-top: 100px;
+}
+
+.photo_fond {
+	display: block;
+	position: absolute;
+	width: 100%;
+}
+
+h2.slogan {
+	color: #797979;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 21px;
+	padding-left: 20px;
+	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
 }
 
 .deroul {
@@ -161,6 +172,10 @@ h2.slogan {
 .txt_accueil {
 	background-color: rgba(255,255,255,0.85);
 	height: 300px;
+}
+
+.contenu_accueil {
+	margin-top: 50px;
 }
 
 /* ---------------- A EFFACER APRES DEV --------------------
@@ -177,10 +192,6 @@ h2.slogan {
 #menu {
 	border: 4px solid #434ea0;
 }*/
-
-#sidebar {
-	background-color: #FF002A;
-}
 
 .submenu {
 	background-color: #9925aa;
