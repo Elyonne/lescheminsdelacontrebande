@@ -8,6 +8,28 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	width: 100%;
 }
 
+#overlay{
+	background:#000;
+	position:fixed;
+	top:100px;
+	height:100%;
+	width:100%;
+	z-index:20;
+	opacity:0;
+	
+	transition:0.5s;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	-moz-transition:0.5s;
+	-mz-transition:0.5s;
+	-o-transition:0.5s;
+	
+}
+
+#overlay.visible{
+	opacity:0.8;
+}
+
 .fixed {
 	position: fixed;
 }
@@ -20,12 +42,19 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	font-weight: bold;
 }
 
+.fixed {
+	position: fixed;
+	z-index: 999;
+}
+
 .col-md-12 {
 	padding: 0;
 }
 
 #nav, #logo, #lang, #menu {
 	height: 100px;
+	z-index:999;
+	position:relative;
 }
 
 #page {
@@ -35,8 +64,14 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 /****************************** MENU ******************************/
 
 .navigation {
-	background-color: #fff;
 	z-index: 999;
+}
+
+#nav .wrapper{
+	position:relative;
+	z-index:99;
+	height:100px;
+	background-color: #fff;
 }
 
 #lang {
@@ -49,9 +84,31 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	z-index: 10;
 }
 
-.submenu {
+#bg_photo {
+	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
+	background-size: cover;*/
+	z-index: -1;
+	position: fixed;
+	margin-top: 100px;
+}
+
+.test {
+	display: block;
+	position: absolute;
+	width: 100%;
+}
+
+.submenu{
+	position:relative;
+	z-index:0;
+	background:0;
+	
+}
+
+.submenu > div {
+	position:absolute;
 	height: 400px;
-	margin-top: -500px;
+	background-color: #9925aa;
 }
 
 .menu {
@@ -66,14 +123,14 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 .menu > li:last-child {
-  margin-left: auto;
+	margin-left: auto;
 }
 
 .menu > li:last-child a {
-  color: #272727;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
+	color: #272727;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 .menu li a{
@@ -225,9 +282,29 @@ h2.slogan {
 	height: 300px;
 }
 
-.contenu_accueil {
+#contenu_accueil {
 	margin-top: 50px;
+<<<<<<< HEAD
 	margin-bottom: 200px;
+=======
+	position:relative;
+	z-index:10;
+}
+
+.gras {
+	font-weight: bold;
+}
+
+.deroul {
+	background-color: #ff002a;
+	height: 50px;
+	color: white;
+}
+
+.txt_accueil {
+	background-color: rgba(255,255,255,0.85);
+	height: 300px;
+>>>>>>> f2f8923409c2223386a1a5d9ae84e89c79367a96
 }
 
 /* ---------------- A EFFACER APRES DEV --------------------
@@ -244,10 +321,6 @@ h2.slogan {
 #menu {
 	border: 4px solid #434ea0;
 }*/
-
-.submenu {
-	background-color: #9925aa;
-}
 
 /*#page {
 	background-color: grey;
