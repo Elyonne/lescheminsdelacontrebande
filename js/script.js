@@ -11,19 +11,6 @@ $(function() {
 		sousMenu.not(href).slideUp("normal",function(){
 					sousMenu.filter(href).slideToggle();
 		});
-		
-		/*if (sousMenu.not(href).hasClass("open")) {
-			sousMenu.not(href)
-											.removeClass("open")
-											.delay(500)
-											.queue(function() {
-												sousMenu.filter(href)
-																				.addClass("open");
-											});
-		} else {
-			console.log(false);
-			sousMenu.filter(href).toggleClass("open");
-		}*/
 		return false;
 	});
 	$('a').on("click", function() {
