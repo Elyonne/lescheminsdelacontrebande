@@ -1,4 +1,4 @@
-/* GENERAL */
+/****************************** GENERAL ******************************/
 
 html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100%;
@@ -16,6 +16,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	width:100%;
 	z-index:20;
 	opacity:0;
+	display:none;
 	
 	transition:0.5s;
 	-webkit-transition:0.5s;
@@ -27,6 +28,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 #overlay.visible{
+	display:block;
 	opacity:0.8;
 }
 
@@ -61,7 +63,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	z-index: 10;
 }
 
-/* MENU */
+/****************************** MENU ******************************/
 
 .navigation {
 	z-index: 999;
@@ -195,7 +197,58 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	padding: 0px;
 }
 
-/* ACCUEIL */
+/****************************** FOOTER ******************************/
+
+footer {
+	background-color: #333;
+	height: 120px;
+	position: absolute;
+	bottom: 0;
+}
+
+.foot {
+	height: 120px;
+}
+
+.bg_foot {
+	background: #333333 url(../img/bg_footer.png) center 15px no-repeat;
+}
+
+ul.menu_footer {
+	color: #ff002a;
+	text-transform: uppercase;
+	font-size: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bloc_menu_footer {
+	position: absolute;
+	top: 58px;
+	left: 108px;
+	width: 600px;
+}
+
+.menu_footer li {
+	list-style: none;
+	font-weight: bold;
+}
+
+.bloc_partenaires a, bloc_partenaires a:hover {
+	color: #ff002a;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.bloc_partenaires {
+	color: #fff;
+	margin-top: 90px;
+	margin-left: 90px;
+	font-size: 12px;
+}
+
+/****************************** ACCUEIL ******************************/
 
 #bg_photo {
 	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
@@ -233,6 +286,9 @@ h2.slogan {
 
 #contenu_accueil {
 	margin-top: 50px;
+<<<<<<< HEAD
+	margin-bottom: 200px;
+=======
 	position:relative;
 	z-index:10;
 }
@@ -250,6 +306,7 @@ h2.slogan {
 .txt_accueil {
 	background-color: rgba(255,255,255,0.85);
 	height: 300px;
+>>>>>>> f2f8923409c2223386a1a5d9ae84e89c79367a96
 }
 
 /* ---------------- A EFFACER APRES DEV --------------------
