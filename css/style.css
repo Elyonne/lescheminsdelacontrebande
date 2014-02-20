@@ -1,9 +1,23 @@
+/* GENERAL */
+
 html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100%;
 }
 
 .container {
 	width: 100%;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.block {
+	display: block;
+}
+
+.gras {
+	font-weight: bold;
 }
 
 .fixed {
@@ -23,17 +37,15 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100px;
 }
 
-#nav, #nav .wrapper {
-	background-color: #fff;
+#page {
+	z-index: 10;
 }
 
-#nav .wrapper{
-	position:relative;
-	z-index:999;
-	height:100%;
-}
-	#page {
-	z-index: 10;
+/* MENU */
+
+.navigation {
+	background-color: #fff;
+	z-index: 999;
 }
 
 #lang {
@@ -68,32 +80,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 .submenu > div {
 	position:absolute;
 	height: 400px;
- 	background-color: #9925aa;
-}
-
-#sentier{
-	background:#454545;
-}
-
-#carnet{
-	background:#847896;
-}
-
-.submenu>div.open{
-  margin-top:0px;
-}
-
-.block {
-	display: block;
-}
-
-h2.slogan {
-	color: #797979;
-	font-weight: 300;
-	font-style: italic;
-	font-size: 21px;
-	padding-left: 20px;
-	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
+	margin-top: -500px;
 }
 
 .menu {
@@ -130,6 +117,12 @@ h2.slogan {
 	font-size: 18px;
 	color: #ff002a;
 	font-weight: 600;
+}
+
+/* SIDEBAR */
+
+#sidebar {
+	background-color: #FF002A;
 }
 
 .citation {
@@ -170,9 +163,48 @@ h2.slogan {
 	bottom: 0;
 }
 
-
 #sidebar .container-fluid {
 	padding: 0px;
+}
+
+/* ACCUEIL */
+
+#bg_photo {
+	/*background: url(../img/doubs_combe.jpg) top left no-repeat;
+	background-size: cover;*/
+	z-index: 1;
+	position: fixed;
+	margin-top: 100px;
+}
+
+.photo_fond {
+	display: block;
+	position: absolute;
+	width: 100%;
+}
+
+h2.slogan {
+	color: #797979;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 21px;
+	padding-left: 20px;
+	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
+}
+
+.deroul {
+	background-color: #ff002a;
+	height: 50px;
+	color: white;
+}
+
+.txt_accueil {
+	background-color: rgba(255,255,255,0.85);
+	height: 300px;
+}
+
+.contenu_accueil {
+	margin-top: 50px;
 }
 
 .gras {
@@ -205,8 +237,8 @@ h2.slogan {
 	border: 4px solid #434ea0;
 }*/
 
-#sidebar {
-	background-color: #FF002A;
+.submenu {
+	background-color: #9925aa;
 }
 
 /*#page {
