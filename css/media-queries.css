@@ -65,11 +65,7 @@
 		margin-left:0;
 		height:auto;
 	}
-	#menu{
-		height:auto;
-		position:relative;
-		z-index:0;
-	}
+	#menu{height:auto;}
 		.menu{
 		flex-direction:column;
 		height:auto;
@@ -98,20 +94,7 @@
 		position:relative;
 		z-index:50;
 	}
-	#menu.in,#menu.collasping{
-		margin-top: 40px;
-		padding-top:10px;
-		-webkit-transition: all 0.5s ease;
-	}
-	#menu.collapse{
-		margin-top:0;
-	}
-	#content{
-		padding-top:0;
-	}
-}
-
-@media screen and (max-width:767px){
 	#menu{
+		margin-top: 40px;
 	}
 }
