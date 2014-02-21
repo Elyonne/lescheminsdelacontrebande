@@ -184,11 +184,9 @@ strong {
 	padding:1%;
 	margin-right:5px;
 	height:100px;
-	width:100%;
 	position:absolute;
-	display:flex;
-	align-items:flex-end;
-	justify-content:flex-end;
+	top:50px;
+	right:5%;
 }
 
 .test {
