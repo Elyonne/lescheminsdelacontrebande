@@ -13,8 +13,8 @@
 	, .menu li a{
 		font-size:18px;
 	}
-	
-	
+
+
 	#sidebar{
 		transform:translateX(300px);
 		-webkit-transform:translateX(300px);
@@ -22,11 +22,16 @@
 	#layout.visible{
 		transform:translateX(-300px);
 		-webkit-transform:translateX(-300px);
+		
 	}
+	#layout.visible #overlay{
+			height:100%;
+			opacity:0.8;
+		}
 	#nav .left,#page{
 		padding-right:0;
 	}
-	
+
 }
 
 /* lg */

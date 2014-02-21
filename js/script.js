@@ -6,6 +6,7 @@ $(function() {
 	var $sousMenu = $(".submenu > div").hide();
 	var $categorie = $("#menu a");
 	var $overlay = $("#overlay");
+	var $sideBarController = $('#showSideBar.button');
 
 	//EVENTS
 
@@ -29,6 +30,10 @@ $(function() {
 			}
 		});
 		return false;
+	});
+	
+	$sideBarController.on("click",function(){
+		$("#layout").toggleClass('visible');
 	});
 
 //au clic sur l'overlay
