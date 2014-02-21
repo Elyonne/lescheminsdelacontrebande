@@ -41,7 +41,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 
 .container {
 }
-q
+
 .wrapper{
 	float:left;
 	margin-left:8%;
@@ -158,6 +158,10 @@ strong {
 #bg_photo img{
 	width:100%;
 	display:none;
+}
+
+.dropdown-toggle{
+	
 }
 
 .test {
@@ -277,10 +281,6 @@ strong {
 	overflow: hidden;
 	position: absolute;
 	bottom: 100px;
-}
-
-#sidebar .container-fluid {
-	padding: 0px;
 }
 
 /****************************** FOOTER ******************************/

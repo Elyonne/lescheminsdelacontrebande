@@ -1,10 +1,22 @@
 
-/* sm */
+/* xs */
 @media screen and (max-width:767px){
 	#bg_photo img{	
 		min-height:100%;
 		width:0;
 	}
+	.wrapper{
+		width:100%;
+		margin-left:0;
+	}
+	#nav{
+		position:relative;
+	}
+}
+
+/* sm */
+@media screen and (max-width:991px){
+	
 }
 
 /* md */
@@ -20,9 +32,11 @@
 		-webkit-transform:translateX(300px);
 	}
 	#layout.visible{
-		transform:translateX(-300px);
-		-webkit-transform:translateX(-300px);
-		
+		margin-left:-300px;
+	}
+	#layout.visible #sidebar{
+		transform:translateX(0px);
+		-webkit-transform:translateX(0px);
 	}
 	#layout.visible #overlay{
 			height:100%;
