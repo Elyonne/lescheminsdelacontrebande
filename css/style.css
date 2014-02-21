@@ -1,3 +1,16 @@
+/* TRANSITIONS */
+#sidebar
+,#nav .left
+,#page
+,#layout{
+	transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+}
+
+
 /****************************** GENERAL ******************************/
 
 html, body, .container, .row.cent, #page, #sidebar, .cent{
@@ -23,6 +36,28 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	-ms-transition:all 0.5s ease;
 	-o-transition:all 0.5s ease;
 }
+
+#layout,#nav{
+	display:table;
+	table-layout:fixed;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+#page,#nav .left{
+	float:none;
+	display:table-cell;
+	z-index: 10;
+	width:100%;
+	padding-right:300px;
+}
+#sidebar,#nav .right{
+	/* float:none; */
+	display:table-cell;
+	width:300px;
+}
+
 
 .container {
 }
@@ -85,7 +120,7 @@ strong {
 
 #nav, #logo, #menu {
 	height: 100px;
-	z-index:999;
+	z-index:500;
 }
 
 #lang{
@@ -97,9 +132,6 @@ strong {
 	height:100%;
 }
 
-#page {
-	z-index: 10;
-}
 
 #logo img{
 	width:100%;
@@ -124,55 +156,15 @@ strong {
 	width:100%;
 	position:fixed;
 	background-color: #fff;
-	padding-right:25%;
 }
 
 #sidebar {
 	position: fixed;
 	right: 0;
-	z-index: 10;
+	z-index: 990;
 	min-width:296px;
 	max-width:300px;
 }
-
-@media screen and (max-width:767px){
-	#bg_photo img{	
-		min-height:100%;
-		width:0;
-	}
-}
-
-@media screen and (max-width:1199px){
-	#sidebar{
-		transform:translateX(296px);
-		-webkit-transform:translateX(296px);
-	}
-	#sidebar.visible{
-		transform:translateX(0);
-		-webkit-transform:translateX(0);
-	}
-	@media screen and (min-width:1200px){
-		body{
-			display:table;
-		}
-		#page,#sidebar{
-			display:table-cell;
-		}
-		#page{
-			width:100%;
-		}
-	}
-
-
-	#nav{
-		padding:0;
-	}
-	#bg_photo{
-		padding:0!important;
-	}
-}
-
-
 
 #bg_photo {
 	background: url(../img/doubs_combe.jpg) center center no-repeat;
@@ -186,6 +178,10 @@ strong {
 #bg_photo img{
 	width:100%;
 	display:none;
+}
+
+.dropdown-toggle{
+	
 }
 
 .test {
@@ -289,6 +285,21 @@ strong {
 	background-color: #FF002A;
 }
 
+#showSideBar.button{
+	display:block;
+	width:50px;
+	height:50px;
+	background:#000;
+	position:absolute;
+	left:-50px;
+	top:50%;
+}
+#showSideBar.button a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
 .citation {
 	padding: 20px;
 	height:100px;
@@ -331,10 +342,6 @@ strong {
 	bottom: 100px;
 }
 
-#sidebar .container-fluid {
-	padding: 0px;
-}
-
 .max-width300 {
 	max-width: 300px;
 	margin: auto;
@@ -343,7 +350,6 @@ strong {
 .case_submenu {
 	display: flex;
 }
-
 /****************************** FOOTER ******************************/
 footer {
 	height: 120px;
@@ -402,7 +408,11 @@ h2.slogan {
 	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
 }
 
-.deroul {
+#accordion .panel{
+	border:0;
+}
+
+#accordion .panel-heading{
 	background-color: #ff002a;
 	height: 50px;
 	color: white;

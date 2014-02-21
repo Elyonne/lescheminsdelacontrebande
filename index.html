@@ -6,18 +6,18 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/media-queries.css">
 	</head>
 
-	<body class="cent">
-		<div class="container-fluid cent">
-			<div class="row cent">
-				<div id="page" class="col-md-12 container-fluid cent">
+	<body class="cent container-fluid">
+			<div class="cent" id="layout">
+				<div id="page" class="cent">
 					<!-- MENU -->
 					<div id="bg_photo" class="cent"><img src="img/doubs_combe.jpg" alt="doubs combe" class="photo_fond" /></div>
 					<div id="overlay" class="cent"></div>
-					<header id="nav" class="row ">
-						<div class="container-fluid">
-							<div id="lang" class="">
+					<header id="nav" class="row">
+						<div class="container-fluid left">
+							<div id="lang" class="hidden-xs">
 								<img src="img/lg_fr.png" alt="français" class="block">
 								<img src="img/fleche_bas.png" alt="fleche du bas" class="block" />
 							</div>
@@ -36,6 +36,9 @@
 											<li><a href="#">Mon voyage</a></li>
 											<li><a href="#">S'identifier</a> <img src="img/etoile.png" alt="petite étoile rouge" /></li>
 										</ul>
+									</div>
+									<div class="dropdown-toggle pull-right">
+									<span class="caret"></span>
 									</div>
 								</div>
 							</div>
@@ -102,49 +105,72 @@
 
 					<!-- PAGE -->
 					<div class="row container-fluid accueil" id="content">
-
-						<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-							<div class="row cent">
-								<h4 class="col-md-5 col-xs-5 deroul">
-									<strong>Entrez</strong> dans l'aventure !
-								</h4>
-							</div>
-							<div class="row cent">
-								<div class="col-md-10 col-xs-10 txt_accueil">
-									<h5>Un jeu de rôle ludique, participatif et original</h5>
-									Glissez-vous dans la peau d'un contrebandier (Horlogeur, Bricottier, Colporteur) ou d'un douanier en choisissant une de nos 4 itinérances, et vivez une expérience unique sur les traces du passé. Organisez votre voyage en choisissant vos prestataires touristiques. Téléchargez notre application mobile et nos guides papiers pour vous orienter pendant la randonnée. Publiez vos observations et vos albums photos grâce à notre application « Carnets de voyage ».
+						<!-- Panel : entrez dans l'aventure -->
+						<div class="panel-group col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0 .deroul" id="accordion">
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+											<strong>Entrez</strong> dans l'aventure !
+										</a>
+									</h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in">
+									<div class="panel-body">
+										<h5>Un jeu de rôle ludique, participatif et original</h5>
+									<p>Glissez-vous dans la peau d'un contrebandier (Horlogeur, Bricottier, Colporteur) 
+									ou d'un douanier en choisissant une de nos 4 itinérances, et vivez une expérience 
+									unique sur les traces du passé. Organisez votre voyage en choisissant 
+									vos prestataires touristiques. Téléchargez notre application mobile 
+									et nos guides papiers pour vous orienter pendant la randonnée. </p><p>
+									Publiez vos observations et vos albums photos grâce à notre application 
+									« Carnets de voyage ».</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-							<div class="row cent">
-								<h4 class="col-md-5 col-xs-5 deroul">
-									<strong>Sillonez</strong> les sentiers de la contrebande
-								</h4>
-							</div>
-							<div class="row cent">
-								<div class="col-md-10 col-xs-10 txt_accueil">
-									<h5>L'Horlogeur</h5>
-									A travers les 5 étapes du sentier qui vous mèneront de Morteau à La Chaux de Fonds, oubliez vos points de repère habituels et vivez l'aventure de l'horlogerie dans les pas de ses contrebandiers.
-
-									Les points forts de l'itinéraire : 4 musées d'horlogerie, les bornes frontières, le Saut du Doubs, l'urbanisme horloger classé au patrimoine UNESCO ...
+							
+							<!-- Panel : Sillonnez les sentiers de la contrebande -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+											<strong>Sillonez</strong> les sentiers de la contrebande
+										</a>
+									</h4>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse">
+									<div class="panel-body">
+										<h5>L'Horlogeur</h5>
+									<p>A travers les 5 étapes du sentier qui vous mèneront de Morteau à La Chaux de Fonds,
+									oubliez vos points de repère habituels et vivez l'aventure de l'horlogerie 
+									dans les pas de ses contrebandiers.</p><p>
+									Les points forts de l'itinéraire : 4 musées d'horlogerie, les bornes frontières, 
+									le Saut du Doubs, l'urbanisme horloger classé au patrimoine UNESCO ...</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-							<div class="row cent">
-								<h4 class="col-md-5 col-xs-5 deroul">
-									<strong>Créez</strong> votre carnet de voyage
-								</h4>
-							</div>
-							<div class="row cent">
-								<div class="col-md-10 col-xs-10 txt_accueil">
+							
+							<!-- Panel : Créez votre carnet de voyage -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+											<strong>Créez</strong> votre carnet de voyage
+										</a>
+									</h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse">
+									<div class="panel-body">
+										<h5>L'Horlogeur</h5>
 									<h5>Téléchargez notre application gratuite et réalisez votre propre carnet de voyage</h5>
 									Après avoir inséré vos images, textes, illustrations, vidéos et sons, vous aurez la possibilité de publier votre carnet de voyage sur internet ou d'imprimer un album photo de qualité professionnelle. 
 									Utilisez nos gabarits de mise en page automatique ou composez votre propre mise en page pour personnaliser votre journal de bord.
+									</div>
 								</div>
 							</div>
+							
 						</div>
+						
 					</div>
 
 					<!-- FOOTER -->
@@ -167,7 +193,8 @@
 
 				<!-- SIDEBAR -->
 
-				<div id="sidebar" class="col-md-3 col-xs-3 cent container">
+				<div id="sidebar" class="cent container">
+					<div class="button hidden-lg" id="showSideBar"><a href="#sidebar">Ouvrir</a></div>
 					<div class="row cent">
 						<div class="row citation">
 							<p class="quote">« Un voyage fabuleux, des rencontres inoubliables dans un cadre à couper le souffle... »</p>
@@ -180,10 +207,12 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		<script src="libs/jquery.js"></script>
-		<script src="libs/bootstrap/js/bootstrap.js"></script>
+		<!--script src="libs/jquery.transition.js"></script-->
 		<script src="libs/dragend.min.js"></script>
+		
+		<script src="libs/bootstrap/js/bootstrap.js"></script>
+		
 		<script src="js/script.js"></script>
 	</body>
 </html>
