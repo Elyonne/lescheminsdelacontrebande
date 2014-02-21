@@ -253,6 +253,7 @@ strong {
 	border: 3px solid white;
 	position: absolute;
 	z-index: 10;
+	min-height: 94px;
 }
 
 .submenu_hover:hover .img_submenu {
@@ -265,10 +266,49 @@ strong {
 
 .txt_submenu {
 	z-index: 20;
+	min-height: 94px; 
+}
+
+.submenu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+
+.txt_submenu h6 {
+	text-transform: uppercase;
+	color: #ff002a;
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 0px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+	background: url(../img/sep_menu_sentier.png) bottom no-repeat;
+}
+
+.txt_submenu p {
+	font-family: "Tahoma";
+	font-size: 11px;
+	padding: 2px;
 }
 
 #horlogeur {
 	color: #731058;
+}
+
+#bricotte {
+	color: #951133;
+}
+
+#gabelous {
+	color: #9EA534;
+}
+
+#colporteur {
+	color: #007BC4;
 }
 
 /* SIDEBAR */
