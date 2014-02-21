@@ -4,6 +4,18 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	height: 100%;
 }
 
+.cinquante {
+	height: 50%;
+}
+
+.w_cent {
+	width: 100%;
+}
+
+.white {
+	background-color: #fff;
+}
+
 *{
 	transition:all 0.5s ease;
 	-webkit-transition:all 0.5s ease;
@@ -186,7 +198,7 @@ strong {
 	position:relative;
 	z-index:0;
 	background:0;
-
+	top: 100px;
 }
 
 .submenu > div {
@@ -230,6 +242,45 @@ strong {
 	font-size: 18px;
 	color: #ff002a;
 	font-weight: 600;
+}
+
+#sentier {
+	background: url(../img/bg_menu_sentiers_inner.jpg) right top no-repeat;
+	border-radius: 0px 0px 10 10px;
+}
+
+.padding_submenu {
+	padding: 5px 25px;
+}
+
+.titre_submenu {
+	margin: 0px;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.img_submenu {
+	border: 3px solid white;
+	position: absolute;
+	z-index: 10;
+}
+
+.submenu_hover:hover .img_submenu {
+	display: none;
+}
+
+.submenu_hover {
+	position: relative;
+}
+
+.txt_submenu {
+	z-index: 20;
+}
+
+#horlogeur {
+	color: #731058;
 }
 
 /* SIDEBAR */
@@ -282,6 +333,15 @@ strong {
 
 #sidebar .container-fluid {
 	padding: 0px;
+}
+
+.max-width300 {
+	max-width: 300px;
+	margin: auto;
+}
+
+.case_submenu {
+	display: flex;
 }
 
 /****************************** FOOTER ******************************/
