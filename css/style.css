@@ -325,7 +325,11 @@ h2.slogan {
 	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
 }
 
-.deroul {
+#accordion .panel{
+	border:0;
+}
+
+#accordion .panel-heading{
 	background-color: #ff002a;
 	height: 50px;
 	color: white;
