@@ -29,14 +29,6 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	background-color: #fff;
 }
 
-*{
-	transition:all 0.5s ease;
-	-webkit-transition:all 0.5s ease;
-	-moz-transition:all 0.5s ease;
-	-ms-transition:all 0.5s ease;
-	-o-transition:all 0.5s ease;
-}
-
 #layout,#nav{
 	display:table;
 	table-layout:fixed;
