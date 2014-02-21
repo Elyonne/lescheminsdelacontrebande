@@ -8,6 +8,8 @@ $(function() {
 	var $overlay = $("#overlay");
 	var $sideBarController = $('#showSideBar.button');
 	var $layout = $('#layout');
+	var $slogan = $(".slogan").fitText(3);
+	
 	//EVENTS
 
 	//prevent default sur les ancres vides
