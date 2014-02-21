@@ -10,6 +10,7 @@
 	-o-transition:all 0.5s ease;
 }
 
+
 /****************************** GENERAL ******************************/
 
 html, body, .container, .row.cent, #page, #sidebar, .cent{
@@ -180,14 +181,14 @@ strong {
 
 .dropdown-toggle{
 	font-size:2.5em;
-	right:5px;
-	top:50px;
-	padding-right:2%;
+	padding:1%;
+	margin-right:5px;
+	height:100px;
+	width:100%;
 	position:absolute;
 	display:flex;
 	align-items:flex-end;
 	justify-content:flex-end;
-	text-align:right;
 }
 
 .test {
@@ -475,7 +476,7 @@ h2.slogan {
 	height: 300px;
 }
 
-#content {
+#content.accueil {
 	margin-top: 100px;
 	padding-top:50px;
 	margin-bottom: 200px;
