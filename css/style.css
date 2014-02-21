@@ -124,6 +124,11 @@ strong {
 	height:100%;
 }
 
+#logo{
+	max-width:230px;
+	float:left;
+	margin-left:-230px;
+}
 
 #logo img{
 	width:100%;
@@ -135,13 +140,15 @@ strong {
 
 #menu{
 	background:#fff;
+	float:left;
+	width:100%;
 }
-
 #nav .wrapper{
 	position:relative;
 	z-index:99;
 	height:100px;
 	background-color: #fff;
+	padding-left:230px;
 }
 
 #nav{
@@ -173,7 +180,15 @@ strong {
 }
 
 .dropdown-toggle{
-	
+	font-size:2.5em;
+	padding:1%;
+	margin-right:5px;
+	height:100px;
+	width:100%;
+	position:absolute;
+	display:flex;
+	align-items:flex-end;
+	justify-content:flex-end;
 }
 
 .test {
@@ -193,6 +208,7 @@ strong {
 	position:absolute;
 	height: 400px;
 	background-color: #9925aa;
+	max-width:875px;
 }
 
 .menu {
@@ -262,6 +278,11 @@ strong {
 
 .submenu_hover {
 	position: relative;
+}
+
+.submenu_left img{
+	width:100%;
+	max-width:218px;
 }
 
 .txt_submenu {
@@ -435,7 +456,7 @@ h2.slogan {
 	color: #797979;
 	font-weight: 300;
 	font-style: italic;
-	font-size: 21px;
+	font-size: 20px;
 	padding-left: 20px;
 	background: transparent url(../img/sep_menu_accroche.png) bottom left no-repeat;
 }
