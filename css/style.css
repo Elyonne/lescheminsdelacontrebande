@@ -233,7 +233,7 @@ strong {
 #nav .menu {
 	display: flex;
 	line-height: 34px;
-	padding-left: 20px;
+	padding-left: 0;
 	list-style: none;
 	border: none;
 	text-align: left;
@@ -368,10 +368,13 @@ strong {
 	display:block;
 	width:50px;
 	height:50px;
-	background:#000;
+	background:#fff;
 	position:absolute;
-	left:-50px;
+	left:-25px;
 	top:50%;
+	opacity:0.5;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
 }
 #showSideBar.button a{
 	display:block;
