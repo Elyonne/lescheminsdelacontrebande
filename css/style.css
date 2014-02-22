@@ -115,7 +115,7 @@ strong {
 	z-index:500;
 }
 
-#lang{
+.lang{
 	display:flex;
 	align-items: center;
 	justify-content: center;
@@ -189,6 +189,10 @@ strong {
 	right:5%;
 }
 
+.dropdown-toggle a{
+	color:#ff002a;
+}
+
 .test {
 	display: block;
 	position: absolute;
@@ -209,9 +213,8 @@ strong {
 	max-width:875px;
 }
 
-.menu {
+#nav .menu {
 	display: flex;
-	height: 34px;
 	line-height: 34px;
 	padding-left: 20px;
 	list-style: none;
@@ -220,23 +223,26 @@ strong {
 	justify-content: flex-start;
 }
 
-.menu > li:last-child {
+#nav .menu > li:last-child {
 	margin-left: auto;
 	margin-right:10px;
 }
 
-.menu > li:last-child a {
-	color: #272727;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: bold;
-}
+
 
 .menu li a{
 	padding-left: 10px;
 	color: #ff002a;
 	font-size: 21px;
 	text-decoration: none;
+	display:block;
+}
+
+li.connexion a {
+	color: #272727;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 .sep_point {
@@ -248,7 +254,7 @@ strong {
 
 #sentier {
 	background: url(../img/bg_menu_sentiers_inner.jpg) right top no-repeat;
-	border-radius: 0px 0px 10 10px;
+	border-radius: 0px 0px 10px 10px;
 }
 
 .padding_submenu {
@@ -416,7 +422,7 @@ footer {
 	background: #333333 url(../img/bg_footer.png) center 15px no-repeat;
 }
 
-ul.menu_footer {
+footer ul.menu {
 	color: #ff002a;
 	text-transform: uppercase;
 	font-size: 13px;
@@ -429,7 +435,7 @@ ul.menu_footer {
 	list-style: none;
 }
 
-.menu_footer li {
+footer .menu li {
 	font-weight: bold;
 }
 
@@ -474,10 +480,10 @@ h2.slogan {
 	height: 300px;
 }
 
-#content.accueil {
+#content{
 	margin-top: 100px;
 	padding-top:50px;
-	margin-bottom: 200px;
+	/* margin-bottom: 200px; */
 	position:relative;
 	z-index:10;
 }
