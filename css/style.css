@@ -2,7 +2,8 @@
 #sidebar
 ,#nav .left
 ,#page
-,#layout{
+,#layout
+,footer{
 	transition:all 0.5s ease;
 	-webkit-transition:all 0.5s ease;
 	-moz-transition:all 0.5s ease;
@@ -38,6 +39,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	padding:0;
 }
 #page,#nav .left{
+	position:relative;
 	float:none;
 	display:table-cell;
 	z-index: 10;
@@ -71,6 +73,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 #content{
+    height: 100%;
 }
 
 .left{
@@ -116,7 +119,7 @@ strong {
 }
 
 .lang{
-	display:flex;
+	display:flex!important;
 	align-items: center;
 	justify-content: center;
 	width:6%;
@@ -149,6 +152,20 @@ strong {
 	height:100px;
 	background-color: #fff;
 	padding-left:230px;
+}
+
+#menu .head{
+	display:none;
+	flex-direction:row;
+	align-items:center;
+	justify-content:justify;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+#menu .head li{
+	width:50%;
+	text-align: center;
 }
 
 #nav{
@@ -228,9 +245,7 @@ strong {
 	margin-right:10px;
 }
 
-
-
-.menu li a{
+#nav .menu li a{
 	padding-left: 10px;
 	color: #ff002a;
 	font-size: 21px;
@@ -238,10 +253,17 @@ strong {
 	display:block;
 }
 
-li.connexion a {
+.menu li a{
+	color: #ff002a;
+		text-decoration: none;
+
+}
+
+#nav li.connexion a,li.connexion a{
+	display:inline;
 	color: #272727;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 12px!important;
 	font-weight: bold;
 }
 
@@ -409,11 +431,11 @@ li.connexion a {
 }
 /****************************** FOOTER ******************************/
 footer {
-	height: 120px;
 	bottom: 0;
 	z-index:10;
 	background-color: #333;	
 	position:relative;
+	width:100%;
 	z-index:10;
 	background-color: #333;
 }
@@ -483,6 +505,7 @@ h2.slogan {
 #content{
 	margin-top: 100px;
 	padding-top:50px;
+	/* min-height:100%; */
 	/* margin-bottom: 200px; */
 	position:relative;
 	z-index:10;
