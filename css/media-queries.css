@@ -160,7 +160,7 @@
 	
 	.bloc_partenaires{
 		margin-top:0;
-		width:auto;
+		width:auto
 	}
 	
 	.bloc_partenaires p{
@@ -170,9 +170,37 @@
 	#menu .head{
 		display:flex;
 	}
-	#submenu .panel{
-	 position:relative;
-		top:0;
+	.lang,.connexion{
+		width:50%;
+		padding:10px;
+		height:44px;
+		text-align:center;
+		position:relative;
+	}
+	
+	
+	#submenu{
+		top:0px;
 		height:auto;
+		/*display:none;*/
+	}
+	
+	#submenu .panel{
+		height:auto;
+		top:0;
+	}
+	
+	#submenu .panel .panel-heading{
+		height:44px;
+		padding:10px 20px;
+	}
+	
+	#submenu div.panel-body{
+	 position: relative;
+		height:auto;
+		min-height:100px;
+		/*display:none;*/
+		top:0;
+		z-index:99;
 }
 }

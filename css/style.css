@@ -41,8 +41,8 @@ html, body, .container, .row.cent, #page, #sidebar, .h_cent{
 }
 .panel-title a{
 	display:block;
-		height:100%;
-		padding:16px 20px;
+	height:100%;
+	padding:16px 20px;
 }
 
 #layout,#nav{
@@ -134,17 +134,17 @@ strong {
 }
 
 #nav, #logo, #menu {
-	height: 100px;
-	z-index:500;
+	height: auto;
+	z-index: 500;
 }
 
 .lang{
 	display:flex;
 	align-items: center;
 	justify-content: space-around;
-	width:6%;
+	/* width:6%; */
 	position:absolute;
-	height:100%;
+	height: 100px;
 }
 
 #logo{
@@ -196,6 +196,7 @@ strong {
 
 #sidebar {
 	position: fixed;
+	top: 0;
 	right: 0;
 	z-index: 990;
 	min-width:296px;
@@ -247,14 +248,37 @@ strong {
 	padding:0;
 	background:0;
 	top: 100px;
+	height: 0;
+	background:#fff;
 }
 
+#submenu .head{
+	display:block;
+	width:100%;
+}
 
 #submenu .panel{
+	width:100%;
+	height:0;
+}
+
+#submenu a.panel-heading{
+	padding-left: 10px;
+	color: #ff002a;
+	font-size: 21px;
+	text-decoration: none;
+	display:block;
+	width:100%;
+	height:100%;
+	border-top: 1px solid #eee;
+}
+
+#submenu .panel-body{
 	margin-top:0;
+	left: 0;
 	position:absolute;
-	top:-400px;
-	height: 400px;
+	top: -401px;
+	height: 401px;
 	background-color: #9925aa;
 	max-width:875px;
 	background: url(../img/bg_menu_sentiers_inner.jpg) right top no-repeat;
@@ -264,21 +288,20 @@ strong {
 	-ms-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
-	
+
 	transition:top 0.5s ease;
 	-webkit-transition:top 0.5s ease;
 	z-index:-1;
 }
-	
-#submenu .panel.visible{
+
+#submenu .panel-body.visible{
 	top:0px;
 	z-index:99;
 }
 #submenu div.panel-body{
 	padding:0;
-	display:flex!important;
+	display:flex;
 	flex-direction:row;
-	height:100%;
 }
 
 #nav .menu {
@@ -365,7 +388,8 @@ strong {
 }
 #submenu .right{
 	padding:0;
-	padding-top:5px;
+	/* height: 100%; */
+	/* padding-top:5px; */
 	margin:0;
 	flex:1;
 	justify-content:space-around;
@@ -378,8 +402,8 @@ strong {
 }
 #submenu .right>li a{
 	position:relative;
-		max-width:265px;
-		margin:auto;
+	max-width:265px;
+	margin:auto;
 }
 #submenu .right>li a img{
 	width:100%;
@@ -393,7 +417,7 @@ strong {
 
 #submenu a {
 	display: block;
-	width: 100%;
+	/* width: 100%; */
 	height: auto;
 	text-decoration: none;
 	color: inherit;
@@ -479,7 +503,7 @@ strong {
 	font-size: 10px;
 }
 
-/** position absolute pour les deux images (ancr� en haut et en bas) dans le meme bloc**/
+/** position absolute pour les deux images (ancr? en haut et en bas) dans le meme bloc**/
 
 .images_parc {
 	position: relative;

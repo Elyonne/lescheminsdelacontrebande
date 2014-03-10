@@ -47,13 +47,6 @@ this.update = function() {
 
 	} else {
 //-->	ALL
-		$sousMenu.css({
-			display: "block"
-		});
-		$sousMenu.find('.collapse').css({
-			display: "block"
-		});
-		
 
 	}
 };
