@@ -1,53 +1,69 @@
-$(function() {
 //CONSTANTES
+ 
+
+//VARIABLES GLOBALES
+var $sousMenu;
+	var $sousMenus;
+	var $categorie;
+	var $overlay;
+	var $sideBarController;
+	var $layout;
+	var $slogan;
+	var $titreSubmenu;
 
 
-//VARS
-	var $sousMenu = $(".submenu > div").hide();
-	var $categorie = $("#menu a");
-	var $overlay = $("#overlay");
-	var $sideBarController = $('#showSideBar.button');
-	var $layout = $('#layout');
-	var $slogan = $(".slogan").fitText(3);
-	
+//DOCUMENT ONLOAD
+$(function() {
+
+	//INITIALISATION DES VARIABLES JQUERY
+	$sousMenu = $('#submenu');
+	$sousMenus = $("#submenu .panel").removeClass('visible');
+	$categorie = $("#menu a");
+	$overlay = $("#overlay");
+	$sideBarController = $('#showSideBar.button');
+	$layout = $('#layout');
+	$slogan = $(".slogan").fitText(3);
+	$titreSubmenu = $('.titre_submenu').fitText(1.2);
+
 	//EVENTS
 
-	//prevent default sur les ancres vides
+	//-->prevent default sur les ancres vides
 	$('a').on("click", function() {
 		if ($(this).attr('href') === "#") {
 			return false;
 		}
 	});
 
-	//déploiement du menu
+	//-->déploiement du menu
 	$categorie.on("click", function() {
 		var href = $(this).attr('href');
-		$layout.removeClass('visible');
-		$sousMenu.not(href).slideUp("normal", function() {
-			if ($sousMenu.filter(href).is(":visible")) {
-				$sousMenu.filter(href).slideUp();
+		//petit hack js pour éviter d'avoir un "saut" lors de la première ouverture du menu
+			if ($sousMenus.filter(href).hasClass("visible")) {
+				$sousMenus.filter(href).removeClass('visible');
 				$overlay.removeClass('visible');
 			} else {
-				$sousMenu.filter(href).slideDown();
+				$sousMenus.filter(href).addClass('visible');
 				$overlay.addClass('visible');
 			}
-		});
+			$sousMenus.not(href).removeClass('visible');
 		return false;
 	});
-	
-	$sideBarController.on("click",function(){
-			$sousMenu.slideUp();
-		$("#layout").toggleClass('visible');
-				return false;
 
+	//--> contrôle de la side bar.
+	$sideBarController.on("click", function() {
+		$sousMenus.removeClass('visible');
+		$("#layout").toggleClass('visible');
+		return false;
 	});
 
-//au clic sur l'overlay
+//-->au clic sur l'overlay on replie tout.
 	$overlay.on("click", function() {
-		$sousMenu.slideUp();
+		$sousMenus.removeClass('visible');
 		$overlay.removeClass('visible');
 		$layout.removeClass('visible');
 	});
 
 
+	
+	media_query();
 });

@@ -75,6 +75,11 @@
 
 /* xs */
 @media screen and (max-width:767px){
+	#overlay.visible{
+		height:0;
+		opacity:0;
+	}
+	
 	#bg_photo img{	
 		min-height:100%;
 		width:0;
@@ -107,7 +112,7 @@
 	#nav .menu li a{
 		padding-left:20px;
 		height:40px;
-		background:#333333;
+		background:#333;
 	}
 	
 	#nav .menu li a, footer .menu li a{
@@ -165,4 +170,9 @@
 	#menu .head{
 		display:flex;
 	}
+	#submenu .panel{
+	 position:relative;
+		top:0;
+		height:auto;
+}
 }
