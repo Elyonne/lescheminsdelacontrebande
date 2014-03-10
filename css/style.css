@@ -12,13 +12,14 @@
 }
 
 
+
 /****************************** GENERAL ******************************/
 
-html, body, .container, .row.cent, #page, #sidebar, .cent{
+html, body, .container, .row.cent, #page, #sidebar, .h_cent{
 	height: 100%;
 }
 
-.cinquante {
+.h_cinquante {
 	height: 50%;
 }
 
@@ -29,6 +30,20 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 .white {
 	background-color: #fff;
 }
+.panel-heading{
+	margin:0;
+	padding:0;
+}
+.panel-title{
+	display:block;
+	height:100%;
+	width:100%;
+}
+.panel-title a{
+	display:block;
+		height:100%;
+		padding:16px 20px;
+}
 
 #layout,#nav{
 	display:table;
@@ -38,7 +53,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	margin:0;
 	padding:0;
 }
-#page,#nav .left{
+#page,#nav>.left{
 	position:relative;
 	float:none;
 	display:table-cell;
@@ -46,8 +61,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	width:100%;
 	padding-right:300px;
 }
-#sidebar,#nav .right{
-	/* float:none; */
+#sidebar,#nav>.right{
 	display:table-cell;
 	width:300px;
 }
@@ -73,7 +87,7 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 }
 
 #content{
-    height: 100%;
+	height: 100%;
 }
 
 .left{
@@ -97,10 +111,6 @@ html, body, .container, .row.cent, #page, #sidebar, .cent{
 	opacity:0.8;
 }
 
-.block {
-	display: block;
-}
-
 strong {
 	font-weight: bold;
 }
@@ -119,9 +129,9 @@ strong {
 }
 
 .lang{
-	display:flex!important;
+	display:flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	width:6%;
 	position:absolute;
 	height:100%;
@@ -185,6 +195,10 @@ strong {
 #bg_photo {
 	background: url(../img/doubs_combe.jpg) center center no-repeat;
 	background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
 	z-index: -1;
 	position: fixed;
 	padding-top: 100px;
@@ -216,18 +230,45 @@ strong {
 	width: 100%;
 }
 
-.submenu{
+#submenu{
 	position:relative;
 	z-index:0;
+	margin:0;
+	padding:0;
 	background:0;
 	top: 100px;
 }
 
-.submenu > div {
+
+#submenu .panel{
+	margin-top:0;
 	position:absolute;
+	top:-400px;
 	height: 400px;
 	background-color: #9925aa;
 	max-width:875px;
+	background: url(../img/bg_menu_sentiers_inner.jpg) right top no-repeat;
+	border-radius: 0px 0px 10px 10px;
+	background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	
+	transition:top 0.5s ease;
+	-webkit-transition:top 0.5s ease;
+	z-index:-1;
+}
+	
+#submenu .panel.visible{
+	top:0px;
+	z-index:99;
+}
+#submenu div.panel-body{
+	padding:0;
+	display:flex!important;
+	flex-direction:row;
+	height:100%;
 }
 
 #nav .menu {
@@ -255,7 +296,7 @@ strong {
 
 .menu li a{
 	color: #ff002a;
-		text-decoration: none;
+	text-decoration: none;
 
 }
 
@@ -275,8 +316,7 @@ strong {
 }
 
 #sentier {
-	background: url(../img/bg_menu_sentiers_inner.jpg) right top no-repeat;
-	border-radius: 0px 0px 10px 10px;
+
 }
 
 .padding_submenu {
@@ -292,23 +332,48 @@ strong {
 }
 
 .img_submenu {
-	border: 3px solid white;
 	position: absolute;
+	border:3px solid white;
 	z-index: 10;
 	min-height: 94px;
+	width:100%;
 }
 
-.submenu_hover:hover .img_submenu {
+#submenu_hover:hover .img_submenu {
 	display: none;
 }
 
-.submenu_hover {
+#submenu_hover {
 	position: relative;
 }
 
-.submenu_left img{
-	width:218px;
-	max-width:218px;
+#submenu .left{
+	width:219px;
+}
+#submenu .left img{
+	width:219px;
+}
+#submenu .right{
+	padding:0;
+	padding-top:5px;
+	margin:0;
+	flex:1;
+	justify-content:space-around;
+	align-items:center;
+}
+#submenu .right>li {
+	display:block;
+	margin:auto;
+	padding:5px;
+}
+#submenu .right>li a{
+	position:relative;
+		max-width:265px;
+		margin:auto;
+}
+#submenu .right>li a img{
+	width:100%;
+	height:auto;
 }
 
 .txt_submenu {
@@ -316,12 +381,14 @@ strong {
 	min-height: 94px; 
 }
 
-.submenu a {
+#submenu a {
 	display: block;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	text-decoration: none;
 	color: inherit;
+}
+#submenu .collapse{
 }
 
 .txt_submenu h6 {
@@ -402,7 +469,7 @@ strong {
 	font-size: 10px;
 }
 
-/** position absolute pour les deux images (ancrÃ© en haut et en bas) dans le meme bloc**/
+/** position absolute pour les deux images (ancré en haut et en bas) dans le meme bloc**/
 
 .images_parc {
 	position: relative;
@@ -429,9 +496,6 @@ strong {
 	margin: auto;
 }
 
-.case_submenu {
-	display: flex;
-}
 /****************************** FOOTER ******************************/
 footer {
 	bottom: 0;
