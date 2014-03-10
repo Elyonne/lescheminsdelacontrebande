@@ -14,7 +14,7 @@
 		<div class="cent" id="layout">
 			<div id="page" class="cent">
 				<!-- MENU -->
-				<div id="bg_photo" class="cent"><img src="img/doubs_combe.jpg" alt="doubs combe" class="photo_fond" /></div>
+				<div class="cent bg_horlogeur"></div>
 				<div id="overlay" class="cent"></div>
 				<header id="nav" class="row">
 					<div class="container-fluid left">
@@ -143,70 +143,363 @@
 
 				<!-- PAGE -->
 				<div class="row container-fluid accueil cent" id="content">
-					<!-- Panel : entrez dans l'aventure -->
-					<div class="panel-group col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0 .deroul" id="accordion">
-						<div class="panel">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<strong>Entrez</strong> dans l'aventure !
-									</a>
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<h5>Un jeu de rôle ludique, participatif et original</h5>
-									<p>Glissez-vous dans la peau d'un contrebandier (Horlogeur, Bricottier, Colporteur) 
-										ou d'un douanier en choisissant une de nos 4 itinérances, et vivez une expérience 
-										unique sur les traces du passé. Organisez votre voyage en choisissant 
-										vos prestataires touristiques. Téléchargez notre application mobile 
-										et nos guides papiers pour vous orienter pendant la randonnée. </p><p>
-										Publiez vos observations et vos albums photos grâce à notre application 
-										« Carnets de voyage ».</p>
-								</div>
-							</div>
-						</div>
+					<!-- container qui affiche le contenu à l'écran (taille de l'écran)-->
+					<div id="swipe-container" class="row">
+						<!-- container qui va contenir tous le contenu qui va bouger-->
+						<div class="row">
+							<ul id="page-dragend" class="row">
+								<li class="page intro row">
+									<img src="img/illustr_bg_horlogeur2.png" class="illustration col-md-6 col-xs-12" alt="illustration">
+									<div class="col-md-6 col-xs-12">
+										<h3>Découvrez le patrimoine naturel et le savoir-faire technique du pays horloger</h3>
+										<p>Par monts et par vaux, plongez dans l'histoire de l'horlogerie franco-suisse en partant sur les sentiers de la contrebande horlogère. De part et d'autre du Saut du Doubs, les 5 étapes de l'itinéraire vous amèneront à découvrir un riche patrimoine historique et naturel : musées de la montre et bornes frontières, bassins et saut du Doubs, urbanisme horloger...</p>
+									</div>
+								</li>
+								<li class="page infos row">
+									<div class="row col-md-9 col-xs-12">
+										<!-- background avec fleche, on peut enlever si tu veux 
+										<div class="bg-cadre"></div>-->
+										<!-- à droite affichage ordi-->
+										<div class="col-md-8 col-xs-12 info-float-droite">
+											<h4><img src="img/logo_horlogeur_rond.png" alt="logo horlogeur">Points forts de l'itinéraire</h4>
+											<p>4 musées d'horlogerie, les bornes frontières, le Saut du Doubs, l'urbanisme horloger classé au patrimoine UNESCO ...
+											</p>
+											<h4><img src="img/boussolle.png" alt="boussole"> FICHE TECHNIQUE</h4>
+											<p>Les 60 kilomètres de cet itinéraire pédestre vous mèneront de Morteau (F) à La Chaux-de-Fonds (CH). Le voyage retour peut s'effectuer en train en empruntant la Ligne des Horlogers.
 
-						<!-- Panel : Sillonnez les sentiers de la contrebande -->
-						<div class="panel">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-										<strong>Sillonez</strong> les sentiers de la contrebande
-									</a>
-								</h4>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5>L'Horlogeur</h5>
-									<p>A travers les 5 étapes du sentier qui vous mèneront de Morteau à La Chaux de Fonds,
-										oubliez vos points de repère habituels et vivez l'aventure de l'horlogerie 
-										dans les pas de ses contrebandiers.</p><p>
-										Les points forts de l'itinéraire : 4 musées d'horlogerie, les bornes frontières, 
-										le Saut du Doubs, l'urbanisme horloger classé au patrimoine UNESCO ...</p>
-								</div>
-							</div>
-						</div>
+											Composé de 5 étapes, le parcours permet de découvrir plusieurs sites touristiques remarquables parmi lesquels le Saut du Doubs et ses bassins, mais aussi de se familiariser avec le savoir-faire horloger à travers les collections de 4 musées consacrés à la montre et l'horlogerie (Morteau, Villers-le-Lac, Le Locle et La Chaux-de-Fonds).
 
-						<!-- Panel : Créez votre carnet de voyage -->
-						<div class="panel">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-										<strong>Créez</strong> votre carnet de voyage
-									</a>
-								</h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5>L'Horlogeur</h5>
-									<h5>Téléchargez notre application gratuite et réalisez votre propre carnet de voyage</h5>
-									Après avoir inséré vos images, textes, illustrations, vidéos et sons, vous aurez la possibilité de publier votre carnet de voyage sur internet ou d'imprimer un album photo de qualité professionnelle. 
-									Utilisez nos gabarits de mise en page automatique ou composez votre propre mise en page pour personnaliser votre journal de bord.
-								</div>
-							</div>
-						</div>
+											L'itinéraire s'attache également à faire connaître aux randonneurs le patrimoine culturel et architectural de la région : l'urbanisme horloger du Locle et de La Chaux-de-Fonds inscrit au patrimoine mondial de l'Unesco, les bornes frontières qui jalonnent les zones frontalières....
+											</p>
+											<h5>Profil altimétrique</h5>
+											<img src="img/courbe_horlogeur.png" alt="courbe graphique" style="width: 90%;">
+										</div>
+										<!-- à gauche affichage ordi-->
+										<div class="col-md-3 col-xs-12 row transport">
+											<img src="img/illustr_perso_horlogeur.png" alt="randonneur" class="col-md-12 col-xs-3" style="display: block">
+											<div class="col-md-12 col-xs-8">
+												<h5>Transports</h5>
+												<p>la Ligne des Horlogers
+												Informations sur les horaires :
+												• Gares de Morteau ou de La Chaux-de-Fonds
+												• <a href="http://www.ter-sncf.com/">www.ter-sncf.com</a> (région Franche-Comté)
+												tél. : 0 800 802 479
+												• <a href="http://www.sbb.ch/">www.sbb.ch</a> (Suisse)
+												tél. : 0 900 300 300</p>
+											</div>
+											<div class="col-md-12 col-xs-12">
+												<h5>Balisage</h5>
+												<p><strong>Balisage commun sur l’ensemble du sentier</strong><br>
+													<img src="img/balisage_1.png" alt="balisage"><br>
+													<strong>Balisage en France</strong><br>
+													<img src="img/balisage_2.png" alt="balisage"><br>
+													Régional GR® 5<br><br>
+													<strong>Balisage en Suisse</strong><br>
+													<img src="img/balisage_4.png" alt="balisage">
+												</p>
+											</div>
+											<div class="col-md-12 col-xs-12">
+												<h5>Cartes</h5>
+												<p>
+													<strong>IGN - France</strong><br>
+													3524 OT - Morteau Saut du Doubs<br>
+													<br>
+													<strong>Swiss Topo - Suisse</strong><br>
+													231 - Le Locle 232 - Vallon de St Ismier<br>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="page infos row">
+									<div class="row col-md-9 col-xs-12 ">
+										<!-- background avec fleche, on peut enlever si tu veux 
+										<div class="bg-cadre"></div>-->
+										<!-- à droite affichage ordi-->
+										<div class="col-md-8 col-xs-12 info-float-droite">
+											<h4>5 jours sur la piste de la contrebande horlogère</h4>
+											<h4> Entrez dans l'aventure...</h4>
+											<p><strong>Un jeu de rôle ludique, participatif et original</strong></p>
+											<p>Tout au long de votre périple initiatique nous vous invitons à participer à un jeu ! Résolvez les énigmes figurant sur les totems ludiques disposés le long du parcours, récupérez chez nos partenaires musées d’horlogerie français et suisses les pièces d’un mécanisme et transportez-les jusqu’à la Chaux-de-Fonds. Ces pièces vous serviront à actionner un engrenage mystérieux d’où sortira un présent bien mérité qui récompensera votre apprentissage d’horlogeur.</p>
+											<p>Sur les traces de Philémon, un ancêtre horlogeur, initiez-vous à l'un des plus beaux métiers du monde. Avec la complicité de cet aïeul, faites votre apprentissage en horlogerie et percez la connaissance des maîtres du temps.</p>
+										</div>
+										<!-- à gauche affichage ordi-->
+										<div class="col-md-3 col-xs-12 row jeu-de-role center">
+											<img src="img/illustr_jeu_de_role.jpg" alt="randonneur" class="col-md-12 col-xs-3">
+										</div>
+									</div>
+								</li>
+								<li class="page infos row">
+									<div class="row col-md-9 col-xs-12 ">
+										<!-- background avec fleche, on peut enlever si tu veux 
+										<div class="bg-cadre"></div>-->
+										<!-- à gauche affichage ordi-->
+										<div class="col-md-3 col-xs-12 row">
+											<!-- Nav tabs -->
+											<ul class="nav nav-tabs">
+											  <li class="active"><a href="#etape1" data-toggle="tab">Etape 1</a></li>
+											  <li><a href="#etape2" data-toggle="tab">Etape 2</a></li>
+											  <li><a href="#etape3" data-toggle="tab">Etape 3</a></li>
+											  <li><a href="#etape4" data-toggle="tab">Etape 4</a></li>
+											  <li><a href="#etape5" data-toggle="tab">Etape 5</a></li>
+											</ul>
+										</div>
+										<!-- à droite affichage ordi-->
+										<div class="col-md-8 col-xs-12 info-float-droite">
+											<h4><img src="img/logo_horlogeur_rond.png" alt="logo horlogeur">Étapes de l'itinéraire</h4><br>
+											<!-- Tab panes -->
+											<div class="tab-content">
+											  <div class="tab-pane active" id="etape1">
+												<h6>Morteau - Le Vieux Châteleu (France)</h6>
+												<table class="table table-striped">
+													<tr>
+														<td>
+															<h6>Distance</h6>
+															9.50
+														</td>
+														<td class="cell-mil">
+															<h6>Denivele</h6>
+															484m
+														</td>
+														<td>
+															<h6>Temps de marche</h6>
+															5h
+														</td>
+													</tr>
+												</table>
+												<img src="img/horlogeur-etape-1.jpg" class="info-float-droite etape">
+												<p>Cette première étape commence au musée de l’Horlogerie du Haut-Doubs à Morteau. Vous traversez ensuite la plaine de Morteau, vestige d’un lac paléolitique, au milieu de laquelle s’écoulent paresseusement les eaux du Doubs.</p>
+												<p>L’ascension commence dans la forêt sous le Mont Gaudichot jusqu’au lieu-dit du Châtaignot au dessus duquel vous atteignez le point culminant de cette étape. Vous redescendez ensuite dans la combe vers le Vieux Châteleu. Attention, il n’y a pas de possibilité de ravitaillement le long du parcours.</p>
+												<h5>À voir sur le sentier</h5>
+												<p>Le paléolac de Morteau<br>
+												Mont Châteleu</p>
+												<h5>À quelques pas du sentier</h5>
+												<p>Fonderie de cloches Obertino<br>
+												Les fermes-musées  du Pays Horloger<br>
+												Belvédère du Mont Châteleu</p>
+											  </div>
 
+											 <div class="tab-pane" id="etape2">
+												<h6>Le Vieux Châteleu - Sur La Roche (France)</h6>
+												<table class="table table-striped">
+													<tr>
+														<td>
+															<h6>Distance</h6>
+															11.80
+														</td>
+														<td class="cell-mil">
+															<h6>Denivele</h6>
+															215m
+														</td>
+														<td>
+															<h6>Temps de marche</h6>
+															3h30
+														</td>
+													</tr>
+												</table>
+												<img src="img/horlogeur-etape-2.jpg" class="info-float-droite etape">
+												<p>Cette deuxième étape vous conduit à la frontière franco-suisse. Après avoir quitté le Vieux Châteleu, vous passez au lieu-dit “Les Cernoniers“ où vous découvrez la chapelle Saint-Anne et admirez des fermes à tuyé, cheminée typique du Haut-Doubs. Puis le chemin se dirige vers le Meix Lagor, où vous pouvez vous restaurer.L’itinéraire longe ensuite la frontière où les bornes matérialisent encore aujourd’hui la limite entre les deux pays. Le chemin vous emmène enfin jusqu’au lieu-dit “Sur la Roche“ où s’achève cette deuxième étape.</p>
+												<h5>À voir sur le sentier</h5>
+												<p>La ferme Chopard<br>
+												Chapelle Saint Anne</p>
+												<h5>À quelques pas du sentier</h5>
+												<p>Sauge Artisans du Bois<br>
+												Grotte de la Grande Cave <br>
+												Ancienne borne frontière</p>
+											  </div>
+
+											  <div class="tab-pane" id="etape3">
+											  	<h6>Sur La Roche - Les Brenets (France - Suisse)</h6>
+												<table class="table table-striped">
+													<tr>
+														<td>
+															<h6>Distance</h6>
+															13.90
+														</td>
+														<td class="cell-mil">
+															<h6>Denivele</h6>
+															210m
+														</td>
+														<td>
+															<h6>Temps de marche</h6>
+															4h
+														</td>
+													</tr>
+												</table>
+												<img src="img/horlogeur-etape-3.jpg" class="info-float-droite etape">
+												<p>Pour cette étape, vous descendez sur Villers-le-Lac où le Musée de la Montre vous attend. Le parcours emprunte le GR5 - GTJ, longe le Lac de Chaillexon (appelé Lac des Brenets en Suisse), puis surplombe les Bassins du Doubs. Le chemin descend ensuite jusqu’au site du Saut du Doubs où plusieurs belvédères vous permettent d’admirer la somptueuse cascade. Attention, pour le retour, vous devez prendre le bateau de la compagnie NLB, côté suisse, situé après la passerelle, pour rejoindre Les Brenets et la fin de l’étape (dernier départ autour de 17h en saison ; se renseigner auprès de la compagnie).</p>
+												<h5>À voir sur le sentier</h5>
+												<p>Musée de la montre<br>
+												Bassins et Saut du Doubs<br>
+												Grotte du Roi de Prusse</p>
+												<h5>À quelques pas du sentier</h5>
+												<p>Chapelle des Bassots<br>
+												Belvédère des Taillards</p>
+											  </div>
+
+											  <div class="tab-pane" id="etape4">
+											  	<h6>Les Brenets - Le Locle (Suisse)</h6>
+												<table class="table table-striped">
+													<tr>
+														<td>
+															<h6>Distance</h6>
+															11.60
+														</td>
+														<td class="cell-mil">
+															<h6>Denivele</h6>
+															409m
+														</td>
+														<td>
+															<h6>Temps de marche</h6>
+															4h30
+														</td>
+													</tr>
+												</table>
+												<img src="img/horlogeur-etape-4.jpg" class="info-float-droite etape">
+												<p>L’itinéraire surplombe les Bassins du Doubs côté suisse pour descendre jusqu’au Saut du Doubs. Une montée assez raide par le bien nommé “sentier des contrebandiers“ vous conduit ensuite jusqu’aux pâturages des Endroits.</p>
+												<p>Une fois cette ascension terminée, vous n’avez plus qu’à redescendre vers la ville du Locle et son urbanisme horloger classé au patrimoine mondial de l’UNESCO. Votre passage au Musée d’horlogerie du Locle dans le Château des Monts, vous permet de découvrir les merveilles du savoir-faire horloger. Attention, il n’y a pas de possibilité de ravitaillement le long du parcours.</p>
+												<h5>À voir sur le sentier</h5>
+												<p>Musée de l'horlogerie du Locle<br>
+												Murs de pierres sèches<br>
+												Contrebandier à l’affût</p>
+												<h5>À quelques pas du sentier</h5>
+												<p>La Tour Jurgensen<br>
+												Les Moulins souterrains du Col des Roches<br>
+												Musée des Beaux-Arts du Locle</p>
+											  </div>
+
+											  <div class="tab-pane" id="etape5">
+											  	<h6>Le Locle - La Chaux-De-Fonds</h6>
+												<table class="table table-striped">
+													<tr>
+														<td>
+															<h6>Distance</h6>
+															14.00
+														</td>
+														<td class="cell-mil">
+															<h6>Denivele</h6>
+															350m
+														</td>
+														<td>
+															<h6>Temps de marche</h6>
+															4h30
+														</td>
+													</tr>
+												</table>
+												<img src="img/horlogeur-etape-5.jpg" class="info-float-droite etape">
+												<p>Cette dernière étape sur votre parcours d’horlogeur vous emmène à la Ferme Modèle après une montée depuis Le Locle. Marchant sur les pas des révolutionnaires, vous vous dirigez vers La Chaux-de-Fonds dont vous pouvez observer la particularité architecturale de l’urbanisme horloger labellisée UNESCO.Après un passage au Musée international d’horlogerie, le sentier se termine à l’Espace de l’Urbanisme Horloger. Depuis la gare de La Chaux-de-Fonds, vous pouvez prendre la Ligne des Horlogers pour rentrer à Morteau, train autrefois utilisé par certains contrebandiers.</p>
+												<h5>À voir sur le sentier</h5>
+												<p>Musée International de l'horlogerie<br>
+												Urbanisme horloger<br>
+												Bois du petit-chateâu<br>
+												Tour Espacité</p>
+												<h5>À quelques pas du sentier</h5>
+												<p>Villas Le Corbusier<br>
+												Point de vue sur le Lac de Moron<br>
+												Musée Paysan et artisanal</p>
+											  </div>
+											</div>
+											<div class="voir-carte">
+											<a href="#"><img src="img/btn-voir-carte.png" alt="voir la carte"></a>
+										</div>
+									</div>
+								</li>
+
+								<li class="page infos row li-carousel">
+									<div class="row col-md-9 col-xs-12">
+										<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+										  <!-- Indicators -->
+										  <ol class="carousel-indicators">
+										    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+										    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+										  </ol>
+
+										  <!-- Wrapper for slides -->
+										  <div class="carousel-inner">
+										    <div class="item active">
+										      <img src="img/chateau-pertusier.jpg" alt="Château Pertusier">
+										      <div class="carousel-caption">
+										      <h3>Chateau Pertusier</h3>
+										      <p>©A Collenot</p>
+										      </div>
+										    </div>
+										    <div class="item">
+										      <img src="img/gps-safari_mont_chateleu01_02.jpg" alt="Mont Chateleu">
+										      <div class="carousel-caption">
+										       <h3>Mont Chateleu</h3>
+										       <p>©A Collenot</p>
+										      </div>			      
+										    </div>
+										    <div class="item">
+										     <img src="img/http-__www.pays-horloger.jpg" alt="Ferme Du Pays Horloger">
+										     <div class="carousel-caption">
+										      <h3>Ferme Du Pays Horloger</h3>
+										      <p>©A Collenot</p>
+										      </div>
+										    </div>
+										    <div class="item">
+										      <img src="img/007.jpg" alt="Murs de pierre">
+										      <div class="carousel-caption">
+										       <h3>Murs de pierre</h3>
+										       <p>©A Collenot</p>
+										      </div>
+											</div>
+										    <div class="item">
+										      <img src="img/Bassins-du-Doubs-mai-(4).jpg" alt="Ferme Du Pays Horloger">
+										      <div class="carousel-caption">
+										       <h3>Bassin du Doubsr</h3>
+										       <p>©A Collenot</p>
+										      </div>
+											</div>
+										    <div class="item">
+										      <img src="img/cdf_02_03_helico_71.jpg" alt="La chaud de Fond">
+										      <div class="carousel-caption">
+										       <h3>La chaud de Fond</h3>
+										       <p>©A Collenot</p>
+										      </div>
+											</div>
+										    <div class="item">
+										      <img src="img/DSC_0649.jpg" alt="Mouvement d'horlogerie">
+										      <div class="carousel-caption">
+										       <h3>Mouvement d'horlogerie</h3>
+										       <p>©A Collenot</p>
+										    </div>
+											</div>
+										    <div class="item">
+										      <img src="img/DSC_0618.jpg" alt="Musée de l'horlogerie">
+										      <div class="carousel-caption">
+										       <h3>Musée de l'horlogerie</h3>
+										       <p>©A Collenot</p>
+										      </div>
+											</div>
+										    <div class="item">
+										      <img src="img/DSC_0616.jpg" alt="Cadrans">
+										      <div class="carousel-caption">
+										       <h3>Cadrans</h3>
+										       <p>©A Collenot</p>
+										      </div>
+										    </div>
+										</div>
+
+										  <!-- Controls -->
+										  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+										    <span class="glyphicon glyphicon-chevron-left"></span>
+										  </a>
+										  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+										    <span class="glyphicon glyphicon-chevron-right"></span>
+										  </a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 					</div>
 
 				</div>
@@ -240,9 +533,21 @@
 					<p class="quote">« Un voyage fabuleux, des rencontres inoubliables dans un cadre à couper le souffle... »</p>
 					<p class="auteur">> JEAN-PIERRE PETIT (58) . 07/2013</p>
 				</div>
-				<div class="images_parc cent">
-					<img src="img/carte_parc.png" alt="carte parc" class="parc" />
-					<img src="img/pub_parc.jpg" alt="pub parc" class="parc_pub"/>
+				<div class="sidebar-horlogeur">
+					<h2> L'Horlogeur <img src="img/logo_horlogeur_rond_big.png" alt="logo horlogeur" class="logo-sidebar"></h2>
+					<p>
+						<span class="red-bold">Type d'itinéraire :</span> Itinéraire pédestre<br>
+						<span class="red-bold">Dénivelé :</span> 1670m<br>
+						<span class="red-bold">Distance sentier :</span> 60.00Km<br>
+						<span class="red-bold">Durée :</span> 5 jours<br>
+					</p>
+					<div id="contener_map_mini">
+						<img src="img/map.png">
+						<div class="affich-carte">
+							<a href="#"><img src="img/afficher-la-carte.png"></a>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
