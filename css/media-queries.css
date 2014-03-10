@@ -44,7 +44,13 @@
 	#nav .left,#page{
 		padding-right:0;
 	}
+	/*.bg-cadre {
+		display: none;
+	}*/
 
+	.affich-carte {
+		display: none;
+	}
 }
 
 /* sm */
@@ -52,8 +58,18 @@
 	#nav .menu li a{
 		font-size:15px;
 	}
-	.txt_submenu p{
-		display:none;
+
+	.tab-pane {
+		border-left: none;
+	}
+}
+
+@media screen and (min-width: 991px) {
+	.transport {
+		top: -70px;
+	}
+	.jeu-de-role {
+		top: -20px;
 	}
 }
 

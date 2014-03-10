@@ -66,6 +66,16 @@ html, body, .container, .row.cent, #page, #sidebar, .h_cent{
 	width:300px;
 }
 
+.center {
+	display: flex;
+	justify-content: center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	display: -ms-flex;
+	-ms-justify-content: center;
+	display: -moz-flex;
+	-moz-justify-content: center;
+}
 
 .container {
 }
@@ -469,7 +479,7 @@ strong {
 	font-size: 10px;
 }
 
-/** position absolute pour les deux images (ancré en haut et en bas) dans le meme bloc**/
+/** position absolute pour les deux images (ancrï¿½ en haut et en bas) dans le meme bloc**/
 
 .images_parc {
 	position: relative;
@@ -494,6 +504,45 @@ strong {
 .max-width300 {
 	max-width: 300px;
 	margin: auto;
+}
+
+.case_submenu {
+	display: flex;
+}
+
+.sidebar-horlogeur {
+	width: 100%;
+	height: 100%;
+	background: url(../img/bandeau_droite_sentier.jpg) no-repeat bottom;
+	padding: 5px 0 0 30px;
+
+}
+
+.sidebar-horlogeur h2 {
+	font-size: 35px;
+	color: #ff002a;
+	border-bottom: 1px solid #cccccc;
+}
+
+.red-bold {
+	color: red;
+	font-weight: bold;
+}
+
+.logo-sidebar {
+	display: block;
+	float: right;
+}
+
+#contener_map_mini {
+	margin-left: -30px;
+}
+
+.affich-carte {
+	position: absolute;
+	display: block;
+	left: -25px;
+	bottom: 34%;
 }
 
 /****************************** FOOTER ******************************/
@@ -588,9 +637,215 @@ h2.slogan {
 	color: white;
 }
 
-.txt_accueil {
-	background-color: rgba(255,255,255,0.85);
-	height: 300px;
+/****************************** HORLOGEUR ******************************/
+
+.bg_horlogeur {
+	background: url(../img/bg_default.jpg) center center no-repeat;
+	background-size: cover;
+	z-index: -1;
+	position: fixed;
+	padding-top: 100px;
+	width:100%;
+}
+
+li.page .illustration {
+	display: block;
+}
+
+li.page {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 60px;
+}
+
+li.page h3 {
+	color: #FF002A;
+	font-style: italic;
+	font-size: 35px;
+	float: left;
+}
+
+li.page h4 {
+	color: #FF002A;
+	text-transform: uppercase;
+	font-size: 24px;
+	display: flex;
+	align-items: flex-end;
+}
+
+li.page img {
+	margin-right: 5px;
+}
+
+li.page h5 {
+	color: #FF002A;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+li.intro div {
+	/*width: 50%;*/
+}
+
+li.infos > div {
+	/*width: 80%;*/
+	margin: auto;
+	background-color: #fff;
+	padding-bottom: 20px;
+	padding-left: 10px; 
+	padding: 0 10px 20px 10px;
+}
+
+.info-float-droite {
+	float: right;
+}
+
+/*.bg-cadre {
+	background: url('../img/background-sentier2.png') no-repeat bottom;
+	left: -20px;
+	bottom: -50px;
+	z-index: 0;
+	height: 106%;
+	position: absolute;
+	width: 110%;
+	background-size: 100% 100%; 
+}*/
+
+li.page > div {
+	font-size: 14px;
+	color: #4d4b4b; 
+	margin: 0 125px 0 35px;
+}
+
+li.infos div {
+	font-size: 12px;
+}
+
+.jeu-de-role {
+	transform:rotate(10deg);
+	-ms-transform:rotate(10deg); /* IE 9 */
+	-webkit-transform:rotate(10deg); /*Chrome etc*/
+}
+
+.nav-tabs {
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-moz-flex-direction: column;
+	padding: 10px 20px;
+	border: none;
+}
+
+.nav-tabs li.active a, .nav-tabs li.active a:hover{
+	border: none;
+	color: #555555;
+	border-bottom: 1px solid #555555;
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.nav-tabs li a, .nav-tabs li a:hover{
+	border: none;
+	border-bottom: 1px solid #555555;
+	color: #ff002a;
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tab-pane {
+	border-left: 1px solid #dbdbdb;
+	padding-left: 10px;
+	height: 100%;
+}
+
+.tab-pane h6 {
+	color: #555555;
+	font-size: 21px;
+}
+
+.voir-carte {
+	position: absolute;
+	bottom: -20px;
+	right: 50px;
+}
+
+.voir-carte img {
+	width: 100%;
+}
+
+li.li-carousel > div {
+	padding: 0;
+}
+
+/******************* CAROUSEL ************************/
+
+.carousel .carousel-inner .item .carousel-caption {
+	left: 0;
+	right: 0;
+	width: 40%;
+	position: absolute;
+	z-index: 0;
+}
+
+.carousel .carousel-inner .item .carousel-caption h3 {
+	width: 100%;
+	float: right;
+	text-align: right;
+	color: #fff;
+	background-color: #ff002a;
+	font-weight: normal;
+	font-size: 20px;
+	padding: 5px 10px 5px 5px;
+	margin-left: 0;
+	left: 0;
+	font-style:normal;
+	text-shadow: none;
+}
+
+.carousel .carousel-inner .item .carousel-caption p {
+	background-color: #fff;
+	color: #ff002a;
+	padding: 5px;
+	text-shadow: none;
+	font-style: italic;
+	float: right;
+	font-size: 9px;
+}
+
+/******************* TABLES ************************/
+
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+	background-color: transparent;
+}
+
+.table > tbody > tr > td {
+	border-top: 1px solid #A4A295;
+	border-bottom: 1px solid #A4A295;
+	padding-left: 10px;
+	color: #ff002a;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.table > tbody > tr > td h6 {
+	color: #8F8E8E;
+	font-size: 9px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 5px 0 0 0;
+}
+
+.table > tbody > tr > td.cell-mil {
+	border-left: 1px solid #DBDBDB;
+	border-right: 1px solid #DBDBDB;
 }
 
 /* ---------------- A EFFACER APRES DEV --------------------
