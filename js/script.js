@@ -10,6 +10,7 @@ var $sousMenu;
 	var $layout;
 	var $slogan;
 	var $titreSubmenu;
+	var $dragendBlock;
 	
 //DOCUMENT ONLOAD
 $(function() {
