@@ -666,11 +666,8 @@ ul#page-dragend{
 	padding:0;
 }
 
-<<<<<<< HEAD
-ul#page-dragend>li{
-=======
+
 ul#page-dragend li{
->>>>>>> 0bcb109cbec57b1aec2bcecefa3662788e36dcf1
 	margin:auto;
 	width:75%;
 }
