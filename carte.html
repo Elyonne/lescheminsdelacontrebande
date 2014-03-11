@@ -8,6 +8,7 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/media-queries.css">
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	</head>
 
 	<body class="h_cent container-fluid">
@@ -146,93 +147,13 @@
 				<!-- /HEADER -->
 
 				<!-- PAGE -->
-				<div class="row container-fluid accueil h_cent" id="content">
-					<!-- Panel : entrez dans l'aventure -->
-					<div class="panel-group col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0 .deroul" id="accordion">
-						<div class="panel">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										<strong>Entrez</strong> dans l'aventure !
-									</a>
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<h5>Un jeu de rôle ludique, participatif et original</h5>
-									<p>Glissez-vous dans la peau d'un contrebandier (Horlogeur, Bricottier, Colporteur) 
-										ou d'un douanier en choisissant une de nos 4 itinérances, et vivez une expérience 
-										unique sur les traces du passé. Organisez votre voyage en choisissant 
-										vos prestataires touristiques. Téléchargez notre application mobile 
-										et nos guides papiers pour vous orienter pendant la randonnée. </p><p>
-										Publiez vos observations et vos albums photos grâce à notre application 
-										« Carnets de voyage ».</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel : Sillonnez les sentiers de la contrebande -->
-						<div class="panel">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-										<strong>Sillonez</strong> les sentiers de la contrebande
-									</a>
-								</h4>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5>L'Horlogeur</h5>
-									<p>A travers les 5 étapes du sentier qui vous mèneront de Morteau à La Chaux de Fonds,
-										oubliez vos points de repère habituels et vivez l'aventure de l'horlogerie 
-										dans les pas de ses contrebandiers.</p><p>
-										Les points forts de l'itinéraire : 4 musées d'horlogerie, les bornes frontières, 
-										le Saut du Doubs, l'urbanisme horloger classé au patrimoine UNESCO ...</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel : Créez votre carnet de voyage -->
-						<div class="panel">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-										<strong>Créez</strong> votre carnet de voyage
-									</a>
-								</h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5>L'Horlogeur</h5>
-									<h5>Téléchargez notre application gratuite et réalisez votre propre carnet de voyage</h5>
-									Après avoir inséré vos images, textes, illustrations, vidéos et sons, vous aurez la possibilité de publier votre carnet de voyage sur internet ou d'imprimer un album photo de qualité professionnelle. 
-									Utilisez nos gabarits de mise en page automatique ou composez votre propre mise en page pour personnaliser votre journal de bord.
-								</div>
-							</div>
-						</div>
+				<div class="row container-fluid accueil h_cent carte-content" id="content">
+					<div id="map-canvas" class="col-sm-12 col-xs-12">
 
 					</div>
-
 				</div>
 
-				<!-- FOOTER -->
-				<footer class="row" id="footer">
-					<img src="img/bg_footer-xs.png" class="visible-xs">
-					<div class="bg_foot">
-						<ul class="menu">
-							<li><a href="#">Mentions légales</a></li>
-							<li><a href="#">Accès</a></li>
-							<li><a href="#">Contacts</a></li>
-							<li><a href="#">Newsletter</a></li>
-							<li><a href="#">Partenaires</a></li>
-							<li><a href="#">Presse</a></li>
-						</ul>
-						<hr class="visible-xs">
-						<div class="bloc_partenaires">
-							<p><span>©&nbsp; <a href="http://www.pays-horloger.fr/">Syndicat mixte du pays horloger</a></span><span class="hidden-xs"> | </span><a href="http://www.parcdoubs.ch/">Association pour le parc naturel du doubs</a></p>
-						</div>
-					</div>
-				</footer>
+				
 
 				<!-- SIDEBAR -->
 
@@ -243,8 +164,24 @@
 							<p class="quote">« Un voyage fabuleux, des rencontres inoubliables dans un cadre à couper le souffle... »</p>
 							<p class="auteur">> JEAN-PIERRE PETIT (58) . 07/2013</p>
 						</div>
-						<div class="images_parc h_cent">
-							<img src="img/carte_parc.png" alt="carte parc" class="parc" />
+						<div class="sidebar-horlogeur">
+							<h2> L'Horlogeur <img src="img/logo_horlogeur_rond_big.png" alt="logo horlogeur" class="logo-sidebar"></h2>
+							<p>
+								<span class="red-bold">Type d'itinéraire :</span> Itinéraire pédestre<br>
+								<span class="red-bold">Dénivelé :</span> 1670m<br>
+								<span class="red-bold">Distance sentier :</span> 60.00Km<br>
+								<span class="red-bold">Durée :</span> 5 jours<br>
+							</p>
+						</div>
+						<div class="selection-carte">
+							<input type="checkbox" name="carte" value="Hébergement" checked="checked"> Hébergement<br>
+							<input type="checkbox" name="carte" value="Restauration" checked="checked"> Restauration<br>
+							<input type="checkbox" name="carte" value="Activités" checked="checked"> Activités<br>
+							<input type="checkbox" name="carte" value="Musées" checked="checked"> Musées<br>
+							<input type="checkbox" name="carte" value="Transports" checked="checked"> Transports<br>
+							<input type="checkbox" name="carte" value="Points d'intérêt" checked="checked"> Points d'intérêt<br>
+						</div>
+						<div class="images_parc h_cent img_carte">
 							<img src="img/pub_parc.jpg" alt="pub parc" class="parc_pub"/>
 						</div>
 					</div>
@@ -260,5 +197,6 @@
 
 			<script src="js/media-queries.js"></script>
 			<script src="js/script.js"></script>
+			<script src="js/carte.js"></script>
 	</body>
 </html>
