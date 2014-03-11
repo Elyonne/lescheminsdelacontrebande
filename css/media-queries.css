@@ -240,4 +240,10 @@ ul#page-dragend>li{
 	width:100%;
 }
 
+#showSideBar.button{
+	width:70px;
+	height:70px;
+		left:-35px;
+}
+
 }
