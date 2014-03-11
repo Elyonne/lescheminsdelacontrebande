@@ -569,6 +569,24 @@ strong {
 	bottom: 34%;
 }
 
+.txt-affiche-carte {
+	background-color: #ff002a;
+	color: #fff;
+	padding: 2px;
+	margin-top: 5px;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.txt-affiche-carte a, .txt-affiche-carte a:hover {
+	text-decoration: none;
+	color: #fff
+}
+
+
+
 /****************************** FOOTER ******************************/
 footer {
 	bottom: 0;
