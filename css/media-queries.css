@@ -225,7 +225,8 @@
 	height:100%;
 }
 
-ul#page-dragend>li{
+
+ul#page-dragend li{
 	margin:auto;
 	width:100%;
 }
