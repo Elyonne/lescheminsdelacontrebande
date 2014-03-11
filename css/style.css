@@ -667,6 +667,11 @@ ul#page-dragend{
 	padding:0;
 }
 
+ul#page-dragend li{
+	margin:auto;
+	width:75%;
+}
+
 .bg_horlogeur {
 	background: url(../img/bg_default.jpg) center center no-repeat;
 	background-size: cover;
