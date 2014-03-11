@@ -372,11 +372,11 @@ strong {
 	width:100%;
 }
 
-#submenu_hover:hover .img_submenu {
-	display: none;
+.submenu_hover:hover .img_submenu {
+	display: none!important;
 }
 
-#submenu_hover {
+.submenu_hover {
 	position: relative;
 }
 

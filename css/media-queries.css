@@ -75,11 +75,12 @@
 
 /* xs */
 @media screen and (max-width:767px){
+	/*
 	#overlay.visible{
 		height:0;
 		opacity:0;
 	}
-	
+	*/
 	#bg_photo img{	
 		min-height:100%;
 		width:0;
