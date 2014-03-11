@@ -23,7 +23,7 @@ $(function() {
 	$sideBarController = $('#showSideBar.button');
 	$layout = $('#layout');
 	$slogan = $(".slogan").fitText(3);
-	$titreSubmenu = $('.titre_submenu').fitText(1.2);
+	/*$titreSubmenu = $('.titre_submenu').fitText(1.2);*/
 
 	//EVENTS
 
@@ -35,6 +35,7 @@ $(function() {
 		
 		if($(this).attr('href')=='#submenu'){
 			$sousMenu.slideToggle();
+			$sousMenus.hide();
 			return false;
 		}
 		
@@ -59,7 +60,6 @@ $(function() {
 	
 	$xs_categorie.on('click',function(){
 		var href = $(this).attr('href');
-		$sousMenu.find('.panel-body').slideUp();
 		$(href).stop(true).slideToggle();
 		return false;
 		
