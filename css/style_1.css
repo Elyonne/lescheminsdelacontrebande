@@ -536,6 +536,7 @@ strong {
 
 .sidebar-horlogeur {
 	width: 100%;
+	height: 100%;
 	background: url(../img/bandeau_droite_sentier.jpg) no-repeat bottom;
 	padding: 5px 0 0 30px;
 
@@ -666,11 +667,6 @@ ul#page-dragend{
 	padding:0;
 }
 
-ul#page-dragend>li{
-	margin:auto;
-	width:75%;
-}
-
 .bg_horlogeur {
 	background: url(../img/bg_default.jpg) center center no-repeat;
 	background-size: cover;
@@ -693,7 +689,6 @@ li.page {
 	display:block;
 	margin-bottom: 60px;
 	margin:auto;
-	float:none;
 }
 
 li.page h3 {
@@ -853,35 +848,6 @@ li.li-carousel > div {
 	font-style: italic;
 	float: right;
 	font-size: 9px;
-}
-
-/******************* MAPS ************************/
-
-#map-canvas {
-	height: 100%;
-}
-
-.carte-content {
-	/*margin-top: 100px !important;*/
-	padding-top: 15px !important;
-	height: 100% !important;
-}
-
-.selection-carte {
-	height: auto;
-	width: 100%;
-	background-color: #fff;
-	color: #ff002a;
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: bold;
-	padding-left: 20px;
-	margin-top: -10px;
-}
-
-.img_carte {
-	height: 55%;
-	overflow: hidden;
 }
 
 /******************* TABLES ************************/

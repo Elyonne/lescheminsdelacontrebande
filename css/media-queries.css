@@ -199,17 +199,13 @@
 	 position: relative;
 		height:auto;
 		min-height:100px;
-		display:flex;
-		top:0;
-		z-index:99;
-	 	flex-direction: column-reverse;
-	}
-
-	.carte-content {
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-
+	 display:flex;
+		
+	 top:0;
+		
+	 z-index:99;
+		
+	 flex-direction: column-reverse;
 }
 #submenu div.panel-body .right{
 		margin-top:20px;
@@ -228,4 +224,10 @@
 #submenu div.panel-body .left img{
 	height:100%;
 }
+
+ul#page-dragend>li{
+	margin:auto;
+	width:100%;
+}
+
 }
