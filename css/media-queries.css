@@ -225,6 +225,10 @@
 	height:100%;
 }
 
+	.carte-content {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
 
 ul#page-dragend li{
 	margin:auto;
