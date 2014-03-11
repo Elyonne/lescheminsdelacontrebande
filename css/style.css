@@ -469,13 +469,14 @@ strong {
 	display:block;
 	width:50px;
 	height:50px;
-	background:#fff;
+	background:#444;
 	position:absolute;
 	left:-25px;
 	top:50%;
 	opacity:0.5;
 	transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
+	z-index:99;
 }
 #showSideBar.button a{
 	display:block;
@@ -669,7 +670,9 @@ ul#page-dragend{
 
 ul#page-dragend>li{
 	margin:auto;
+	padding-top:50px;
 	width:75%;
+	
 }
 
 .bg_horlogeur {
