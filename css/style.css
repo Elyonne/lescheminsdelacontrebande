@@ -667,7 +667,7 @@ ul#page-dragend{
 	padding:0;
 }
 
-ul#page-dragend li{
+ul#page-dragend>li{
 	margin:auto;
 	width:75%;
 }
