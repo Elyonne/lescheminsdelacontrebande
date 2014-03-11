@@ -752,6 +752,18 @@ li.infos > div {
 	background-size: 100% 100%; 
 }*/
 
+.intro {
+	width:75%;
+	margin: auto;
+	padding-bottom: 20px;
+	min-height: 300px;
+}
+
+#content ul.container-fluid {
+	margin-top: 20px;
+}
+
+
 div.intro > div {
 	font-size: 14px;
 	color: #4d4b4b; 
