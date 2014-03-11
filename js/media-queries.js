@@ -17,7 +17,7 @@ this.update = function() {
 	
 	if (DEVICE_WIDTH < BREAKPOINT.xs) {
 //--> xs
-
+	$sousMenus.hide();
 
 	} else if (DEVICE_WIDTH < BREAKPOINT.sm) {
 //--> xs,sm
@@ -43,7 +43,7 @@ this.update = function() {
 
 	} else if (DEVICE_WIDTH > BREAKPOINT.xs) {
 //--> sm,md,lg
-
+$sousMenus.show();
 
 	} else {
 //-->	ALL

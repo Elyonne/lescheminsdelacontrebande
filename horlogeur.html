@@ -13,9 +13,11 @@
 	<body class="cent container-fluid">
 		<div class="cent" id="layout">
 			<div id="page" class="cent">
-				<!-- MENU -->
+
 				<div class="cent bg_horlogeur"></div>
 				<div id="overlay" class="cent"></div>
+				
+				<!-- HEADER -->
 				<header id="nav" class="row">
 					<div class="container-fluid left">
 						<div class="hidden-xs lang">
@@ -25,29 +27,20 @@
 						<div class="wrapper container-fluid">
 							<div class="row">
 								<div id="logo" class="">
-									<img src="img/logo_contrebande.png" alt="logo" />
+									<a href="index.html">
+										<img src="img/logo_contrebande.png" alt="Les chemins de la Contrebande | Logo" />
+									</a>
 								</div>
 								<div class="dropdown-toggle pull-right visible-xs">
-									<a href="#menu" data-toggle="collapse">
+									<a href="#submenu">
 										<i class="fa fa-bars"></i>
 									</a>
 								</div>
-								<div id="menu" class="row">
+								<div id="menu" class="row hidden-xs">
 									<h2 class="slogan">Jouez à saute-frontière en couple, en groupe ou en famille !</h2>
-
-									<ul class="head">
-										<li class="visible-xs lang">
-											<img src="img/lg_fr.png" alt="français" class="block">
-											<img src="img/fleche_bas.png" alt="fleche du bas" class="block" />
-										</li>
-										<li class="visible-xs connexion">
-											<a href="#">S'identifier</a>
-											<img src="img/etoile.png" alt="petite étoile rouge" />
-										</li>
-									</ul>
-
 									<ul class="menu row">
-										<li><a href="#sentier">Les chemins</a>
+										<li>
+											<a href="#sentier">Les chemins</a>
 										</li>
 										<li class="sep_point">.</li>
 										<li><a href="#carnet">Les carnets</a></li>
@@ -59,104 +52,114 @@
 								</div>
 							</div>
 						</div>
-						<div class="submenu">
-							<div class="col-sm-10 col-sm-offset-1" id="sentier">
-								<div class="row cent">
-									<div class="col-sm-3 col-xs-12 cent submenu_left">
+						<ul class="panel-group" id="submenu">
+							<li class="head visible-xs container-fluid">
+									<ul class="row">
+										<li class="visible-xs lang col-xs-6">
+											<img src="img/lg_fr.png" alt="français" class="block">
+											<img src="img/fleche_bas.png" alt="fleche du bas" class="block" />
+										</li>
+										<li class="visible-xs connexion col-xs-6">
+											<a href="#">S'identifier</a>
+											<img src="img/etoile.png" alt="petite étoile rouge" />
+										</li>
+									</ul>
+							</li>
+							<li class="panel">
+								<a class="visible-xs panel-heading" href="#sentier">Les chemins</a>
+								<div id="sentier"
+													class="panel-body
+													col-xs-12 col-xs-offset-0 
+													col-sm-10 col-sm-offset-1 
+													container-fluid" >
+									<div class="h_cent left">
 										<img src="img/dwl_carnets.png" alt="télécharger les guides papiers">
 										<img src="img/dwl_app.png" alt="télécharger l'application mobile">
 									</div>
-									<div class="col-sm-9 col-xs-12 cent submenu_right">
-										<div class="row cinquante">
-											<div class="col-sm-6 col-xs-12 cent case_submenu">
-												<div class=" cent padding_submenu max-width300" >
-													<a href="#">
-														<img src="img/logo_horlogeur.png" alt="l'horlogeur" class="block w_cent">
-														<p id="horlogeur" class="white titre_submenu">L'horlogeur</p>
-														<div class="w_cent white submenu_hover">
-															<img src="img/horlogeur_pres.jpg" alt="l'horlogeur" class="white block w_cent img_submenu hidden-xs">
-															<div class="txt_submenu">
-																<h6>5 étapes de 2h à 5h / 60 km</h6>
-																<p>De Morteau (F) à La Chaux-de-Fonds (CH), plongez dans l'histoire de l'horlogerie et de sa contrebande.</p>
-															</div>
-														</div>
-													</a>
+									<ul class="h_cent right row">
+										<li class=" col-sm-6">
+											<a href="horlogeur.html">
+												<img src="img/logo_horlogeur.png" alt="l'horlogeur" class="block row">
+												<p id="horlogeur" class="white titre_submenu">L'horlogeur</p>
+												<div class="row white submenu_hover">
+													<img src="img/horlogeur_pres.jpg" alt="l'horlogeur" class="white block row img_submenu hidden-xs">
+													<div class="txt_submenu">
+														<h6>5 étapes de 2h à 5h / 60 km</h6>
+														<p>De Morteau (F) à La Chaux-de-Fonds (CH), plongez dans l'histoire de l'horlogerie et de sa contrebande.</p>
+													</div>
 												</div>
-											</div>
-											<div class="col-sm-6 col-xs-12 cent case_submenu">
-												<div class=" cent padding_submenu max-width300" >
-													<a href="#">
-														<img src="img/logo_bricotte.png" alt="la bricotte" class="block w_cent">
-														<p id="bricotte" class="white titre_submenu">La bricotte</p>
-														<div class="w_cent white submenu_hover">
-															<img src="img/bricotte_pres.jpg" alt="la bricotte" class="white block w_cent img_submenu hidden-xs">
-															<div class="txt_submenu">
-																<h6>4 étapes de 4h à 5h30 / 51 km</h6>
-																<p>Franchissez les Echelles de la Mort pour passer vos marchandises de contrebande entre Maïche (F) et Les Bois (CH).</p>
-															</div>
-														</div>
-													</a>
+											</a>
+										</li>
+										<li class=" col-sm-6">
+											<a href="#">
+												<img src="img/logo_bricotte.png" alt="la bricotte" class="block row">
+												<p id="bricotte" class="white titre_submenu">La bricotte</p>
+												<div class="row white submenu_hover">
+													<img src="img/bricotte_pres.jpg" alt="la bricotte" class="white block row img_submenu hidden-xs">
+													<div class="txt_submenu">
+														<h6>4 étapes de 4h à 5h30 / 51 km</h6>
+														<p>Franchissez les Echelles de la Mort pour passer vos marchandises de contrebande entre Maïche (F) et Les Bois (CH).</p>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row cinquante">
-											<div class="col-sm-6 col-xs-12 cent case_submenu">
-												<div class=" cent padding_submenu max-width300" >
-													<a href="#">
-														<img src="img/logo_gabelous.png" alt="les gabelous" class="block w_cent">
-														<p id="gabelous" class="white titre_submenu">Les gabelous</p>
-														<div class="w_cent white submenu_hover">
-															<img src="img/gabelous_pres.jpg" alt="les gabelous" class="white block w_cent img_submenu hidden-xs">
-															<div class="txt_submenu">
-																<h6>19 étapes de 2h à 7h / 250 km</h6>
-																<p>Sur les crêtes de la vallée du Doubs franco-suisse, glissez-vous dans la peau d'un douanier pour chasser les contrebandiers.</p>
-															</div>
-														</div>
-													</a>
+											</a>
+										</li>
+										<li class=" col-sm-6">
+											<a href="#">
+												<img src="img/logo_gabelous.png" alt="les gabelous" class="block row">
+												<p id="gabelous" class="white titre_submenu">Les gabelous</p>
+												<div class="row white submenu_hover">
+													<img src="img/gabelous_pres.jpg" alt="les gabelous" class="white block row img_submenu hidden-xs">
+													<div class="txt_submenu">
+														<h6>19 étapes de 2h à 7h / 250 km</h6>
+														<p>Sur les crêtes de la vallée du Doubs franco-suisse, glissez-vous dans la peau d'un douanier pour chasser les contrebandiers.</p>
+													</div>
 												</div>
-
-											</div>
-											<div class="col-sm-6 col-xs-12 cent case_submenu">
-												<div class=" cent padding_submenu max-width300" >
-													<a href="#">
-														<img src="img/logo_colporteur.png" alt="le colporteur" class="block w_cent">
-														<p id="colporteur" class="white titre_submenu">Le colporteur</p>
-														<div class="w_cent white submenu_hover">
-															<img src="img/colporteur_pres.jpg" alt="le colporteur" class="white block w_cent img_submenu hidden-xs">
-															<div class="txt_submenu">
-																<h6>5 étapes de 3h à 5h / 35 km</h6>
-																<p>De St-Ursanne à St-Hippolyte par la vallée du Doubs, immergez-vous dans la vie des colporteurs d'antan.</p>
-															</div>
-														</div>
-													</a>
+											</a>
+										</li>
+										<li class=" col-sm-6">
+											<a href="#">
+												<img src="img/logo_colporteur.png" alt="le colporteur" class="block row">
+												<p id="colporteur" class="white titre_submenu">Le colporteur</p>
+												<div class="row white submenu_hover">
+													<img src="img/colporteur_pres.jpg" alt="le colporteur" class="white block row img_submenu hidden-xs">
+													<div class="txt_submenu">
+														<h6>5 étapes de 3h à 5h / 35 km</h6>
+														<p>De St-Ursanne à St-Hippolyte par la vallée du Doubs, immergez-vous dans la vie des colporteurs d'antan.</p>
+													</div>
 												</div>
-											</div>
-										</div>
-									</div>
+											</a>
+										</li>
+									</ul>
 								</div>
-							</div>
-							<div class="col-md-10 col-md-offset-1" id="carnet">
-							</div>
-						</div>
+							</li>
+							<li class="panel">
+								<a href="#carnet" class="panel-heading visible-xs">Les carnets</a>
+								<div class="col-xs-12 col-sm-10 col-sm-offset-1 panel-body container-fluid" id="carnet">
+								</div>
+							</li>
+							<li class="panel">
+								<a href="#" class="panel-heading visible-xs">Mes voyages</a>
+							</li>
+							<h2 class="slogan visible-xs">Jouez à saute-frontière en couple, en groupe ou en famille !</h2>
+						</ul>
 					</div>
 				</header>
+				<!-- /HEADER -->
 
 				<!-- PAGE -->
 				<div class="row container-fluid accueil cent" id="content">
-					<!-- container qui affiche le contenu à l'écran (taille de l'écran)-->
-					<div id="swipe-container" class="row">
 						<!-- container qui va contenir tous le contenu qui va bouger-->
-						<div class="row">
-							<ul id="page-dragend" class="row">
-								<li class="page intro row">
-									<img src="img/illustr_bg_horlogeur2.png" class="illustration col-md-6 col-xs-12" alt="illustration">
-									<div class="col-md-6 col-xs-12">
+						<div class="page intro row">
+									<img src="img/illustr_bg_horlogeur2.png" class="illustration col-sm-6 col-xs-12" alt="illustration">
+									<div class="col-sm-6 col-xs-12">
 										<h3>Découvrez le patrimoine naturel et le savoir-faire technique du pays horloger</h3>
 										<p>Par monts et par vaux, plongez dans l'histoire de l'horlogerie franco-suisse en partant sur les sentiers de la contrebande horlogère. De part et d'autre du Saut du Doubs, les 5 étapes de l'itinéraire vous amèneront à découvrir un riche patrimoine historique et naturel : musées de la montre et bornes frontières, bassins et saut du Doubs, urbanisme horloger...</p>
 									</div>
-								</li>
+								</div>
+							<ul id="page-dragend" class="row">
+								
 								<li class="page infos row">
-									<div class="row col-md-9 col-xs-12">
+									<div class="row col-sm-9 col-xs-12">
 										<!-- background avec fleche, on peut enlever si tu veux 
 										<div class="bg-cadre"></div>-->
 										<!-- à droite affichage ordi-->
@@ -499,8 +502,6 @@
 									</div>
 								</li>
 							</ul>
-						</div>
-					</div>
 
 				</div>
 
@@ -559,6 +560,7 @@
 
 	<script src="libs/bootstrap/js/bootstrap.js"></script>
 
+	<script src="js/media-queries.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
