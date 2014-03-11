@@ -697,7 +697,7 @@ li.page {
 	float:none;
 }
 
-li.page h3 {
+div.intro h3 {
 	color: #FF002A;
 	font-style: italic;
 	font-size: 35px;
@@ -749,7 +749,7 @@ li.infos > div {
 	background-size: 100% 100%; 
 }*/
 
-li.page > div {
+div.intro > div {
 	font-size: 14px;
 	color: #4d4b4b; 
 	margin: auto;
